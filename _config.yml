@@ -9,7 +9,7 @@ words_per_minute: 200
 baseurl: /
 
 # Website info
-title: Ghost
+title: Akas Blog
 description: The machine learning enginner
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
