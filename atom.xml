@@ -2,9 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> - Articles</title>
-    <description>The professional publishing platform</description>
+    <description>The machine learning enginner</description>
     <link>
     </link>
+    
+      
+      <item>
+        <title>Jekyll Blog 개설</title>
+        
+          <description>&lt;p&gt;블로그를 개설하였다.&lt;/p&gt;
+</description>
+        
+        <pubDate>Mon, 22 Jul 2019 05:00:00 +0000</pubDate>
+        <link>
+        /Blog-%EA%B0%9C%EC%84%A4</link>
+        <guid isPermaLink="true">/Blog-%EA%B0%9C%EC%84%A4</guid>
+      </item>
+      
     
       
       <item>
