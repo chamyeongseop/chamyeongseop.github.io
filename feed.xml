@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-12T01:38:07+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html"></title><link href="/2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4" rel="alternate" type="text/html" title="" /><published>2019-08-12T01:38:07+00:00</published><updated>2019-08-12T01:38:07+00:00</updated><id>/2019-08-01-Break%EC%99%80%20Continue%EC%9D%98%20%EC%B0%A8%EC%9D%B4</id><content type="html" xml:base="/2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4">&lt;p&gt;C 또는 Java에서 반복문을 탈출하거나, 생략하는 기능이 존재한다.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-12T01:53:02+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html"></title><link href="/2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4" rel="alternate" type="text/html" title="" /><published>2019-08-12T01:53:02+00:00</published><updated>2019-08-12T01:53:02+00:00</updated><id>/2019-08-01-Break%EC%99%80%20Continue%EC%9D%98%20%EC%B0%A8%EC%9D%B4</id><content type="html" xml:base="/2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4">&lt;p&gt;C 또는 Java에서 반복문을 탈출하거나, 생략하는 기능이 존재한다.
 Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 반복문 안에 존재하는 프로그램 내용을 건너 뛰고, 다음 루프로 넘어가는 기능을 한다.&lt;/p&gt;
 
 &lt;h2 id=&quot;continue&quot;&gt;Continue&lt;/h2&gt;
@@ -18,19 +18,7 @@ Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 
 
 &lt;p&gt;Orchestration.&lt;/p&gt;
 
-&lt;p&gt;불특정하게 서버를 등록할 때, 기능별로…환경별로 사용됨.&lt;/p&gt;</content><author><name>Ghost</name></author><category term="Linux" /><summary type="html">Ansible 많은 서버들에 동시에 동일한 환경을 배포해야하는 상황에 사용됨.</summary></entry><entry><title type="html">Manage ports in linux</title><link href="/Manage-ports-in-Linux" rel="alternate" type="text/html" title="Manage ports in linux" /><published>2019-08-01T00:00:00+00:00</published><updated>2019-08-01T00:00:00+00:00</updated><id>/Manage%20ports%20in%20Linux</id><content type="html" xml:base="/Manage-ports-in-Linux">&lt;hr /&gt;
-&lt;p&gt;layout: post
-current: post
-cover: assets/images/water.jpg
-navigation: True
-title: Manage ports in Linux
-date: 2019-07-25 10:18:00
-tags: Linux
-class: post-template
-subclass: ‘post tag-fables’
-logo: assets/images/ghost.png
-author: ghost
-published: false&lt;/p&gt;</content><author><name></name></author><summary type="html">layout: post current: post cover: assets/images/water.jpg navigation: True title: Manage ports in Linux date: 2019-07-25 10:18:00 tags: Linux class: post-template subclass: ‘post tag-fables’ logo: assets/images/ghost.png author: ghost published: false</summary></entry><entry><title type="html">Apache Vesus Nginx</title><link href="/Apache-Vesus-Nginx" rel="alternate" type="text/html" title="Apache Vesus Nginx" /><published>2019-07-25T10:18:00+00:00</published><updated>2019-07-25T10:18:00+00:00</updated><id>/Apache%20Vesus%20Nginx</id><content type="html" xml:base="/Apache-Vesus-Nginx">&lt;h2 id=&quot;apache-vesus-nginx&quot;&gt;Apache Vesus Nginx&lt;/h2&gt;
+&lt;p&gt;불특정하게 서버를 등록할 때, 기능별로…환경별로 사용됨.&lt;/p&gt;</content><author><name>Ghost</name></author><category term="Linux" /><summary type="html">Ansible 많은 서버들에 동시에 동일한 환경을 배포해야하는 상황에 사용됨.</summary></entry><entry><title type="html">CentOS7 포트 관리</title><link href="/Manage-ports-in-Linux" rel="alternate" type="text/html" title="CentOS7 포트 관리" /><published>2019-07-25T10:18:00+00:00</published><updated>2019-07-25T10:18:00+00:00</updated><id>/Manage%20ports%20in%20Linux</id><content type="html" xml:base="/Manage-ports-in-Linux">&lt;p&gt;포트관리 방법에 대해서 정리하려고 한다.&lt;/p&gt;</content><author><name>Ghost</name></author><category term="Linux" /><summary type="html">포트관리 방법에 대해서 정리하려고 한다.</summary></entry><entry><title type="html">Apache Vesus Nginx</title><link href="/Apache-Vesus-Nginx" rel="alternate" type="text/html" title="Apache Vesus Nginx" /><published>2019-07-25T10:18:00+00:00</published><updated>2019-07-25T10:18:00+00:00</updated><id>/Apache%20Vesus%20Nginx</id><content type="html" xml:base="/Apache-Vesus-Nginx">&lt;h2 id=&quot;apache-vesus-nginx&quot;&gt;Apache Vesus Nginx&lt;/h2&gt;
 &lt;p&gt;웹서버는 HTTP 프로토콜을 통해 읽힐수 있는 문서를 처리를 하며 일반적으로 웹 어플리케이션의 앞단에 배치되곤 한다. 동적인 리소스는 WAS에게 처리하도록 하고 정적인 리소스를 보다 효율적으로 처리하기 위한 방법일수도 있다. 크게 Apache와 Nginx가 사용되곤 하는데 이 둘의 차이는 무엇일까? 사실 필자는 사내에서 주로 Apache만 사용하다보니 Nginx는 그저 Apache와는 다른 방식의 웹서버다 또는 보다 경량화 되었다 정도로만 알고있었는데 이번기회를 통해 제대로 알고 비교를 해보면서 결국 어떤게 좋은지 알아보고자 한다.&lt;/p&gt;
 
 &lt;p&gt;구글링을 조금만 해보면 Apache와 Nginx를 비교하는 포스팅이 많이 나온다. 이번 포스팅의 목적 이러한 정보들을 단순히 요약/종합 하려는게 아니고, 최대한 실무 서비스를 운영하는 시각으로 정리하고자 함을 밝힌다.&lt;/p&gt;
