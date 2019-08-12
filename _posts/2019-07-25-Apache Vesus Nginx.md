@@ -10,6 +10,7 @@ class: post-template
 subclass: 'post tag-fables'
 logo: assets/images/ghost.png
 author: ghost
+published: False
 ---
 
 ## Apache Vesus Nginx

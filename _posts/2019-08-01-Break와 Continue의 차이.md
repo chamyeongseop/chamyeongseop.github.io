@@ -3,9 +3,9 @@ layout: post
 current: post
 cover: assets/images/water.jpg
 navigation: True
-title:Break와 Continue의 차이
+title: Break와 Continue의 차이
 date: 2019-07-25 10:18:00
-tags: Linux
+tags: Algorithm
 class: post-template
 subclass: 'post tag-fables'
 logo: assets/images/ghost.png
