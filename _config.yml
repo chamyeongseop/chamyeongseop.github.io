@@ -33,7 +33,7 @@ disqus_shortname: Akas # replace with your disqus username
 
 # Google Analytics
 google_analytics: UA-69281367-1 # replace with your GA tracking identifier
-
+google_fonts: "Nanum+Gothic:400,700"
 # Permalinks
 permalink: /:title
 # permalink: /author/:author

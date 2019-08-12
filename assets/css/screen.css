@@ -27,10 +27,8 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 /*나눔고딕 폰트 설정 */
-<style>
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-</style>
 
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import "global.css";
 
 
