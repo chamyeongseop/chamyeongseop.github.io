@@ -8,19 +8,6 @@
     
       
       <item>
-        <title></title>
-        
-          <description></description>
-        
-        <pubDate>Mon, 12 Aug 2019 01:53:02 +0000</pubDate>
-        <link>
-        /2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4</link>
-        <guid isPermaLink="true">/2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4</guid>
-      </item>
-      
-    
-      
-      <item>
         <title>Ansible</title>
         
           <description>&lt;h2 id=&quot;ansible&quot;&gt;Ansible&lt;/h2&gt;
@@ -51,17 +38,17 @@
     
       
       <item>
-        <title>Apache Vesus Nginx</title>
+        <title>Break와 Continue의 차이</title>
         
-          <description>&lt;h2 id=&quot;apache-vesus-nginx&quot;&gt;Apache Vesus Nginx&lt;/h2&gt;
-&lt;p&gt;웹서버는 HTTP 프로토콜을 통해 읽힐수 있는 문서를 처리를 하며 일반적으로 웹 어플리케이션의 앞단에 배치되곤 한다. 동적인 리소스는 WAS에게 처리하도록 하고 정적인 리소스를 보다 효율적으로 처리하기 위한 방법일수도 있다. 크게 Apache와 Nginx가 사용되곤 하는데 이 둘의 차이는 무엇일까? 사실 필자는 사내에서 주로 Apache만 사용하다보니 Nginx는 그저 Apache와는 다른 방식의 웹서버다 또는 보다 경량화 되었다 정도로만 알고있었는데 이번기회를 통해 제대로 알고 비교를 해보면서 결국 어떤게 좋은지 알아보고자 한다.&lt;/p&gt;
+          <description>&lt;p&gt;C 또는 Java에서 반복문을 탈출하거나, 생략하는 기능이 존재한다.
+Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 반복문 안에 존재하는 프로그램 내용을 건너 뛰고, 다음 루프로 넘어가는 기능을 한다.&lt;/p&gt;
 
 </description>
         
         <pubDate>Thu, 25 Jul 2019 10:18:00 +0000</pubDate>
         <link>
-        /Apache-Vesus-Nginx</link>
-        <guid isPermaLink="true">/Apache-Vesus-Nginx</guid>
+        /Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4</link>
+        <guid isPermaLink="true">/Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4</guid>
       </item>
       
     
