@@ -36,6 +36,8 @@ production stylesheet in assets/built/screen.css
 
 body {
     background: #f4f8fb;
+    font-family: 'Nanum Gothic', sans-serif;
+
 }
 
 .img {
