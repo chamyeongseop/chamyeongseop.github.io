@@ -28,9 +28,7 @@ production stylesheet in assets/built/screen.css
 /* ---------------------------------------------------------- */
 /*나눔고딕 폰트 설정 */
 
-<style>
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
-</style>
 @import "global.css";
 
 
@@ -728,6 +726,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-template .kg-card-markdown > p:first-child {
     font-size: 1.25em;
+    font-family: 'Nanum Gothic', sans-serif;
     line-height: 1.5em;
 }
 
