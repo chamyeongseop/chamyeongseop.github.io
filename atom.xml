@@ -12,10 +12,26 @@
         
           <description></description>
         
-        <pubDate>Mon, 12 Aug 2019 01:27:40 +0000</pubDate>
+        <pubDate>Mon, 12 Aug 2019 01:38:07 +0000</pubDate>
         <link>
         /2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4</link>
         <guid isPermaLink="true">/2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Ansible</title>
+        
+          <description>&lt;h2 id=&quot;ansible&quot;&gt;Ansible&lt;/h2&gt;
+&lt;p&gt;많은 서버들에 동시에 동일한 환경을 배포해야하는 상황에 사용됨.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 02 Aug 2019 10:18:00 +0000</pubDate>
+        <link>
+        /Ansible</link>
+        <guid isPermaLink="true">/Ansible</guid>
       </item>
       
     
@@ -42,6 +58,36 @@ published: false&lt;/p&gt;
         <link>
         /Manage-ports-in-Linux</link>
         <guid isPermaLink="true">/Manage-ports-in-Linux</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Apache Vesus Nginx</title>
+        
+          <description>&lt;h2 id=&quot;apache-vesus-nginx&quot;&gt;Apache Vesus Nginx&lt;/h2&gt;
+&lt;p&gt;웹서버는 HTTP 프로토콜을 통해 읽힐수 있는 문서를 처리를 하며 일반적으로 웹 어플리케이션의 앞단에 배치되곤 한다. 동적인 리소스는 WAS에게 처리하도록 하고 정적인 리소스를 보다 효율적으로 처리하기 위한 방법일수도 있다. 크게 Apache와 Nginx가 사용되곤 하는데 이 둘의 차이는 무엇일까? 사실 필자는 사내에서 주로 Apache만 사용하다보니 Nginx는 그저 Apache와는 다른 방식의 웹서버다 또는 보다 경량화 되었다 정도로만 알고있었는데 이번기회를 통해 제대로 알고 비교를 해보면서 결국 어떤게 좋은지 알아보고자 한다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 25 Jul 2019 10:18:00 +0000</pubDate>
+        <link>
+        /Apache-Vesus-Nginx</link>
+        <guid isPermaLink="true">/Apache-Vesus-Nginx</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>CentOS 환경에서 포트없이 사용하기.</title>
+        
+          <description>&lt;p&gt;Port 번호를 생략하여, Linux 명령어를 사용하는 방법을 다룰 것이다.&lt;/p&gt;
+</description>
+        
+        <pubDate>Wed, 24 Jul 2019 15:00:00 +0000</pubDate>
+        <link>
+        /Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0</link>
+        <guid isPermaLink="true">/Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0</guid>
       </item>
       
     
