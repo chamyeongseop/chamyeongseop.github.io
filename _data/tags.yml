@@ -22,3 +22,19 @@ Machine Learning:
   name: Machine Learning
   description: False
   cover: False
+Algorithm:
+  name: Algorithm
+  description: False
+  cover: False
+CI:
+  name: CI
+  description: False
+  cover: False
+Data Structure:
+  name: Data Structure
+  description: False
+  cover: False
+Python:
+  name: Python
+  description: False
+  cover: False
