@@ -802,6 +802,7 @@ Usage (In Ghost editor):
 .post-full-content blockquote p {
     margin: 0 0 1em 0;
     color: inherit;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: inherit;
     line-height: inherit;
     font-style: italic;
@@ -813,6 +814,7 @@ Usage (In Ghost editor):
 
 .post-full-content code {
     padding: 0 5px 2px;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 0.8em;
     line-height: 1em;
     font-weight: 400!important;
@@ -828,6 +830,7 @@ Usage (In Ghost editor):
     border: color(var(--darkgrey) l(-10%)) 1px solid;
     color: var(--whitegrey);
     font-size: 1.4rem;
+    font-family: 'Nanum Gothic', sans-serif;
     line-height: 1.5em;
     background: color(var(--darkgrey) l(-3%));
     border-radius: 5px;
@@ -836,6 +839,7 @@ Usage (In Ghost editor):
 .post-full-content pre code {
     padding: 0;
     font-size: inherit;
+    font-family: 'Nanum Gothic', sans-serif;
     line-height: inherit;
     background: transparent;
 }
@@ -880,42 +884,50 @@ Usage (In Ghost editor):
     margin: 0.5em 0 0.2em 0;
     font-size: 4.6rem;
     font-weight: 700;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 @media (max-width: 500px) {
     .post-full-content h1 {
+        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.8rem;
     }
 }
 
 .post-full-content h2 {
     margin: 0.5em 0 0.2em 0;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 3.6rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h2 {
+        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.6rem;
     }
 }
 
 .post-full-content h3 {
     margin: 0.5em 0 0.2em 0;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h3 {
+        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.2rem;
     }
 }
 
 .post-full-content h4 {
     margin: 0.5em 0 0.2em 0;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h4 {
+        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.2rem;
     }
 }
@@ -940,6 +952,7 @@ Usage (In Ghost editor):
 @media (max-width: 500px) {
     .post-full-content h5 {
         padding: 0 0 0.5em;
+        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.2rem;
     }
 }
@@ -947,10 +960,12 @@ Usage (In Ghost editor):
 .post-full-content h6 {
     margin: 0.5em 0 0.2em 0;
     font-size: 2.3rem;
+    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h6 {
+        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2rem;
     }
 }
@@ -960,6 +975,7 @@ Usage (In Ghost editor):
 }
 
 .footnotes {
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.5rem;
 }
 
@@ -969,6 +985,7 @@ Usage (In Ghost editor):
 
 .footnote-backref {
     color: var(--blue) !important;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none !important;
