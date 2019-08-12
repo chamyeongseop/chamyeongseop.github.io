@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/author/ghost/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-08-12T08:05:59+00:00</updated>
+  <updated>2019-08-12T23:46:46+00:00</updated>
   <id>/author/ghost/feed.xml</id>
 
   
@@ -42,6 +42,46 @@
   
   
 
+  
+    <entry>
+      <title type="html">Ensemble</title>
+      <link href="/Ensemble" rel="alternate" type="text/html" title="Ensemble" />
+      <published>2019-08-12T10:00:00+00:00</published>
+      <updated>2019-08-12T10:00:00+00:00</updated>
+      <id>/Ensemble</id>
+      <content type="html" xml:base="/Ensemble">&lt;h2 id=&quot;머신러닝-bagging-boosting-stacking&quot;&gt;머신러닝 Bagging, Boosting, Stacking&lt;/h2&gt;
+&lt;h1 id=&quot;bagging&quot;&gt;Bagging&lt;/h1&gt;
+&lt;p&gt;한글 폰트 체크&lt;/p&gt;
+
+&lt;h1 id=&quot;boosting&quot;&gt;Boosting&lt;/h1&gt;
+
+&lt;h1 id=&quot;stacking&quot;&gt;Stacking&lt;/h1&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Ghost</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ML" />
+      
+
+      
+        <summary type="html">머신러닝 Bagging, Boosting, Stacking Bagging 한글 폰트 체크</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Ansible</title>
@@ -454,45 +494,6 @@ Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 
 
       
         <summary type="html">Ghost has a number of different user roles for your team Authors The base user level in Ghost is an author. Authors can write posts, edit their own posts, and publish their own posts. Authors are trusted users. If you don't trust users to be allowed to publish their own posts, you shouldn't invite them to Ghost admin. Editors Editors are the 2nd user level in Ghost. Editors can do everything that an Author can do, but they can also edit and publish the posts of others - as well as their own. Editors can also invite new authors to the site. Administrators The top user level in Ghost is Administrator. Again, administrators can do everything that Authors and Editors can do, but they can also edit all site settings and data, not just content. Additionally, administrators have full access to invite, manage or remove any other user of the site. The Owner There is only ever one owner of a Ghost site. The owner is a special user which has all the same permissions as an Administrator, but with two exceptions: The Owner can never be deleted. And in some circumstances the owner will have access to additional special settings if applicable — for example, billing details, if using Ghost(Pro). It's a good idea to ask all of your users to fill out their user profiles, including bio and social links. These will populate rich structured data for posts and generally create more opportunities for themes to fully populate their design.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Making your site private</title>
-      <link href="/private-sites" rel="alternate" type="text/html" title="Making your site private" />
-      <published>2017-07-27T06:00:00+00:00</published>
-      <updated>2017-07-27T06:00:00+00:00</updated>
-      <id>/private-sites</id>
-      <content type="html" xml:base="/private-sites">&lt;p&gt;Sometimes you might want to put your site behind closed doors&lt;/p&gt;
-&lt;p&gt;If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can hide your Ghost site behind a simple shared pass-phrase.&lt;/p&gt;
-&lt;p&gt;You can toggle this preference on at the bottom of Ghost's General Settings&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://casper.ghost.org/v1.0.0/images/private.png&quot; alt=&quot;private&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Ghost will give you a short, randomly generated pass-phrase which you can share with anyone who needs access to the site while you're working on it. While this setting is enabled, all search engine optimisation features will be switched off to help keep the site off the radar.&lt;/p&gt;
-&lt;p&gt;Do remember though, this is &lt;em&gt;not&lt;/em&gt; secure authentication. You shouldn't rely on this feature for protecting important private data. It's just a simple, shared pass-phrase for very basic privacy.&lt;/p&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Ghost</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Getting started" />
-      
-
-      
-        <summary type="html">Sometimes you might want to put your site behind closed doors If you've got a publication that you don't want the world to see yet because it's not ready to launch, you can hide your Ghost site behind a simple shared pass-phrase. You can toggle this preference on at the bottom of Ghost's General Settings Ghost will give you a short, randomly generated pass-phrase which you can share with anyone who needs access to the site while you're working on it. While this setting is enabled, all search engine optimisation features will be switched off to help keep the site off the radar. Do remember though, this is not secure authentication. You shouldn't rely on this feature for protecting important private data. It's just a simple, shared pass-phrase for very basic privacy.</summary>
       
 
       
