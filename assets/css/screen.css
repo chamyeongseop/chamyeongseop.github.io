@@ -28,10 +28,8 @@ production stylesheet in assets/built/screen.css
 /* ---------------------------------------------------------- */
 /*나눔고딕 폰트 설정 */
 
-<style>
-	/* 일반(400), 굵은(700) 폰트 로드 */
-	@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700');
-</style>
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 
 @import "global.css";
 
