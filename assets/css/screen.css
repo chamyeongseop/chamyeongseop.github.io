@@ -23,12 +23,12 @@ production stylesheet in assets/built/screen.css
 
 */
 
-
+<style>
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap&subset=korean');
+</style>
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 /*나눔고딕 폰트 설정 */
-
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 
 @import "global.css";
