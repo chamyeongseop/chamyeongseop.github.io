@@ -37,7 +37,6 @@ production stylesheet in assets/built/screen.css
 body {
     background: #f4f8fb;
     font-family: 'Nanum Gothic', sans-serif;
-
 }
 
 .img {
@@ -167,6 +166,7 @@ body {
     z-index: 10;
     margin: 0;
     padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 3.8rem;
     font-weight: 700;
 }
@@ -179,6 +179,7 @@ body {
     z-index: 10;
     margin: 0;
     padding: 5px 0;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 2.2rem;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -206,6 +207,7 @@ body {
     align-items: flex-start;
     overflow-y: hidden;
     height: 40px;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -238,6 +240,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 11px 0;
     color: #fff;
     font-size: 1.7rem;
+    font-family: 'Nanum Gothic', sans-serif;
     line-height: 1em;
     font-weight: bold;
     letter-spacing: -0.5px;
@@ -562,11 +565,13 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .page-template .site-main {
     padding-bottom: 4vw;
     background: #fff;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .post-full {
     position: relative;
     z-index: 50;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 /* ^ Required to make .post-full-content:before/after z-index stacking work */
 
@@ -574,6 +579,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0 auto;
     padding: 6vw 3vw 3vw;
     max-width: 1040px;
+    font-family: 'Nanum Gothic', sans-serif;
     text-align: center;
 }
 @media (max-width: 500px) {
@@ -599,6 +605,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-title {
     margin: 0;
     color: color(var(--darkgrey) l(-5%));
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .date-divider {
@@ -997,10 +1004,12 @@ Usage (In Ghost editor):
 /* Some grouped styles for smaller viewports */
 @media (max-width: 500px) {
     .post-full-meta {
+        font-family: 'Nanum Gothic', sans-serif;
         font-size: 1.2rem;
         line-height: 1.3em;
     }
     .post-full-title {
+        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.9rem;
     }
     .post-full-image {
@@ -1055,6 +1064,7 @@ Usage (In Ghost editor):
 .post-full-content table th {
     color: var(--darkgrey);
     font-size: 1.2rem;
+    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
     letter-spacing: 0.2px;
     text-align: left;
