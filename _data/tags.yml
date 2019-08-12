@@ -18,3 +18,7 @@ Linux:
   name: Linux
   description: False
   cover: False
+Machine Learning:
+  name: Machine Learning
+  description: False
+  cover: False
