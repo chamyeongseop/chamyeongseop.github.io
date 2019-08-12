@@ -8,6 +8,45 @@
     
       
       <item>
+        <title></title>
+        
+          <description></description>
+        
+        <pubDate>Mon, 12 Aug 2019 00:54:19 +0000</pubDate>
+        <link>
+        /2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4</link>
+        <guid isPermaLink="true">/2019-08-01-Break%EC%99%80-Continue%EC%9D%98-%EC%B0%A8%EC%9D%B4</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Manage ports in linux</title>
+        
+          <description>&lt;hr /&gt;
+&lt;p&gt;layout: post
+current: post
+cover: assets/images/water.jpg
+navigation: True
+title: Manage ports in Linux
+date: 2019-07-25 10:18:00
+tags: Linux
+class: post-template
+subclass: ‘post tag-fables’
+logo: assets/images/ghost.png
+author: ghost
+published: false&lt;/p&gt;
+</description>
+        
+        <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+        <link>
+        /Manage-ports-in-Linux</link>
+        <guid isPermaLink="true">/Manage-ports-in-Linux</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Jekyll Blog 개설</title>
         
           <description>&lt;p&gt;블로그를 개설하였다.&lt;/p&gt;
