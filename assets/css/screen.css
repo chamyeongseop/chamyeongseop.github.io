@@ -24,7 +24,7 @@ production stylesheet in assets/built/screen.css
 */
 
 
-@import url('https://fonts.googleapis.com/css?family=Sunflower:300,700&display=swap&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap&subset=korean');
 
 
 /* 1. Global - Set up the things
@@ -451,7 +451,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-excerpt {
-    font-family: 'Sunflower', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .post-card-meta {
