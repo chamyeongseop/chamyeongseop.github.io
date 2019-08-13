@@ -23,20 +23,13 @@ production stylesheet in assets/built/screen.css
 
 */
 
-<style>
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap&subset=korean');
-</style>
+
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
-/*나눔고딕 폰트 설정 */
-
-
 @import "global.css";
-
 
 body {
     background: #f4f8fb;
-    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .img {
@@ -166,7 +159,6 @@ body {
     z-index: 10;
     margin: 0;
     padding: 0;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 3.8rem;
     font-weight: 700;
 }
@@ -179,7 +171,6 @@ body {
     z-index: 10;
     margin: 0;
     padding: 5px 0;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 2.2rem;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -207,7 +198,6 @@ body {
     align-items: flex-start;
     overflow-y: hidden;
     height: 40px;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.2rem;
 }
 
@@ -240,7 +230,6 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 11px 0;
     color: #fff;
     font-size: 1.7rem;
-    font-family: 'Nanum Gothic', sans-serif;
     line-height: 1em;
     font-weight: bold;
     letter-spacing: -0.5px;
@@ -459,7 +448,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-excerpt {
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: Georgia, serif;
 }
 
 .post-card-meta {
@@ -565,13 +554,11 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .page-template .site-main {
     padding-bottom: 4vw;
     background: #fff;
-    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .post-full {
     position: relative;
     z-index: 50;
-    font-family: 'Nanum Gothic', sans-serif;
 }
 /* ^ Required to make .post-full-content:before/after z-index stacking work */
 
@@ -579,7 +566,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0 auto;
     padding: 6vw 3vw 3vw;
     max-width: 1040px;
-    font-family: 'Nanum Gothic', sans-serif;
     text-align: center;
 }
 @media (max-width: 500px) {
@@ -605,7 +591,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-title {
     margin: 0;
     color: color(var(--darkgrey) l(-5%));
-    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .date-divider {
@@ -640,7 +625,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0 auto;
     padding: 70px 100px 0;
     min-height: 230px;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: Georgia, serif;
     font-size: 2.2rem;
     line-height: 1.6em;
     background: #fff;
@@ -728,7 +713,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-template .kg-card-markdown > p:first-child {
     font-size: 1.25em;
-    font-family: 'Nanum Gothic', sans-serif;
     line-height: 1.5em;
 }
 
@@ -812,7 +796,6 @@ Usage (In Ghost editor):
 .post-full-content blockquote p {
     margin: 0 0 1em 0;
     color: inherit;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: inherit;
     line-height: inherit;
     font-style: italic;
@@ -824,7 +807,6 @@ Usage (In Ghost editor):
 
 .post-full-content code {
     padding: 0 5px 2px;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 0.8em;
     line-height: 1em;
     font-weight: 400!important;
@@ -840,7 +822,6 @@ Usage (In Ghost editor):
     border: color(var(--darkgrey) l(-10%)) 1px solid;
     color: var(--whitegrey);
     font-size: 1.4rem;
-    font-family: 'Nanum Gothic', sans-serif;
     line-height: 1.5em;
     background: color(var(--darkgrey) l(-3%));
     border-radius: 5px;
@@ -849,7 +830,6 @@ Usage (In Ghost editor):
 .post-full-content pre code {
     padding: 0;
     font-size: inherit;
-    font-family: 'Nanum Gothic', sans-serif;
     line-height: inherit;
     background: transparent;
 }
@@ -887,57 +867,49 @@ Usage (In Ghost editor):
 .post-full-content h5,
 .post-full-content h6 {
     color: color(var(--darkgrey) l(-5%));
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .post-full-content h1 {
     margin: 0.5em 0 0.2em 0;
     font-size: 4.6rem;
     font-weight: 700;
-    font-family: 'Nanum Gothic', sans-serif;
 }
 @media (max-width: 500px) {
     .post-full-content h1 {
-        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.8rem;
     }
 }
 
 .post-full-content h2 {
     margin: 0.5em 0 0.2em 0;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 3.6rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h2 {
-        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.6rem;
     }
 }
 
 .post-full-content h3 {
     margin: 0.5em 0 0.2em 0;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h3 {
-        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.2rem;
     }
 }
 
 .post-full-content h4 {
     margin: 0.5em 0 0.2em 0;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 2.8rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h4 {
-        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.2rem;
     }
 }
@@ -948,7 +920,7 @@ Usage (In Ghost editor):
     padding: 1em 0 1.5em;
     border: 0;
     color: var(--blue);
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: Georgia,serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -962,7 +934,6 @@ Usage (In Ghost editor):
 @media (max-width: 500px) {
     .post-full-content h5 {
         padding: 0 0 0.5em;
-        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.2rem;
     }
 }
@@ -970,12 +941,10 @@ Usage (In Ghost editor):
 .post-full-content h6 {
     margin: 0.5em 0 0.2em 0;
     font-size: 2.3rem;
-    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .post-full-content h6 {
-        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2rem;
     }
 }
@@ -985,7 +954,6 @@ Usage (In Ghost editor):
 }
 
 .footnotes {
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.5rem;
 }
 
@@ -995,7 +963,6 @@ Usage (In Ghost editor):
 
 .footnote-backref {
     color: var(--blue) !important;
-    font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none !important;
@@ -1005,12 +972,10 @@ Usage (In Ghost editor):
 /* Some grouped styles for smaller viewports */
 @media (max-width: 500px) {
     .post-full-meta {
-        font-family: 'Nanum Gothic', sans-serif;
         font-size: 1.2rem;
         line-height: 1.3em;
     }
     .post-full-title {
-        font-family: 'Nanum Gothic', sans-serif;
         font-size: 2.9rem;
     }
     .post-full-image {
@@ -1035,7 +1000,7 @@ Usage (In Ghost editor):
     width: auto;
     border-spacing: 0;
     border-collapse: collapse;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.6rem;
     white-space: nowrap;
     vertical-align: top;
@@ -1065,7 +1030,6 @@ Usage (In Ghost editor):
 .post-full-content table th {
     color: var(--darkgrey);
     font-size: 1.2rem;
-    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 700;
     letter-spacing: 0.2px;
     text-align: left;
@@ -1651,7 +1615,7 @@ Usage (In Ghost editor):
     justify-content: center;
     align-items: center;
     margin: 0 0 10px 0;
-    font-family:'Nanum Gothic', sans-serif;
+    font-family: Georgia, serif;
     font-style: italic;
 }
 
@@ -1790,7 +1754,7 @@ Usage (In Ghost editor):
 .subscribe-overlay-description {
     margin: 0 auto 50px;
     max-width: 650px;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: Georgia, serif;
     font-size: 3rem;
     line-height: 1.3em;
     font-weight: 300;
