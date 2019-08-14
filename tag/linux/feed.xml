@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/tag/linux/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-08-13T02:58:27+00:00</updated>
+  <updated>2019-08-14T00:30:43+00:00</updated>
   <id>/tag/linux/feed.xml</id>
 
   
@@ -22,16 +22,6 @@
   
 
   
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
     
       
     
@@ -87,12 +77,23 @@
     </entry>
   
     <entry>
-      <title type="html">CentOS7 포트 관리</title>
-      <link href="/Manage-ports-in-Linux" rel="alternate" type="text/html" title="CentOS7 포트 관리" />
+      <title type="html">호스트(host) 파일 설정</title>
+      <link href="/Set-Host_txt" rel="alternate" type="text/html" title="호스트(host) 파일 설정" />
       <published>2019-07-25T10:18:00+00:00</published>
       <updated>2019-07-25T10:18:00+00:00</updated>
-      <id>/Manage%20ports%20in%20Linux</id>
-      <content type="html" xml:base="/Manage-ports-in-Linux">&lt;p&gt;포트관리 방법에 대해서 정리하려고 한다.&lt;/p&gt;</content>
+      <id>/Set%20Host_txt</id>
+      <content type="html" xml:base="/Set-Host_txt">&lt;h2 id=&quot;hosts-파일-소개&quot;&gt;hosts 파일 소개&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;CentOS 7에서 DNS(Domain Name Server)보다 먼저 IP주소와 Hostname 또는 Domain 명을 Mapping하는 역할을 한다.&lt;/li&gt;
+  &lt;li&gt;작은 네트워크에서는 DNS를 대신하도록 설정할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;hosts-설정&quot;&gt;hosts 설정&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Home 디렉토리에서 작업&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell&quot; data-lang=&quot;shell&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vi /etc/hosts&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content>
 
       
       
@@ -101,7 +102,7 @@
       
 
       <author>
-          <name>Ghost</name>
+          <name>Myeongseop Cha</name>
         
         
       </author>
@@ -113,7 +114,7 @@
       
 
       
-        <summary type="html">포트관리 방법에 대해서 정리하려고 한다.</summary>
+        <summary type="html">hosts 파일 소개 CentOS 7에서 DNS(Domain Name Server)보다 먼저 IP주소와 Hostname 또는 Domain 명을 Mapping하는 역할을 한다. 작은 네트워크에서는 DNS를 대신하도록 설정할 수 있다.</summary>
       
 
       
