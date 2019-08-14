@@ -1,15 +1,15 @@
 ---
 layout: post
 current: post
-cover: assets/images/water.jpg
+cover: assets/images/summit.jpg
 navigation: True
 title: Array와 LinkedList 정의 및 비교
 date: 2019-08-14 10:18:00
 tags: DS
 class: post-template
 subclass: 'post tag-fables'
-logo: assets/images/ghost.png
-author: Akas
+logo: assets/images/profile2.png
+author: akas
 ---
 ## Array
 가장 기본적인 자료구조인 Array 자료구조는, 논리적 저장 순서와 물리적 저장 순서가 일치한다. 따라서 인덱스(index)로 해당 원소(element)에 접근할 수 있다. 그렇게 때문에 찾고자 하는 원소의 인덱스 값을 알고 있으면 Big-O(1)에 해당 원소로 접근할 수 있다. 즉, Random Access가 가능하다는 장점이 존재한다.
