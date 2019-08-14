@@ -10,12 +10,12 @@ ghost:
   cover: False
 akas:
   username: akas
-  name: Myeongseop Cha
+  name: Akas
   location: Seoul, South Korea
   url_full: False
   url: False
-  bio: Akas is the Machine learning Engineer at SK corporation.
-  picture: assets/images/hannah.jpg
+  bio: Akas is interested in researching Machine Learning developing Algorithms
+  picture: assets/images/profile2.jpg
   facebook: False
   twitter: False
-  cover: assets/images/hannah-cover.jpg
+  cover: assets/images/waves.jpg
