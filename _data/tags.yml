@@ -30,8 +30,8 @@ CI:
   name: CI
   description: False
   cover: False
-Data Structure:
-  name: Data Structure
+DS:
+  name: DS
   description: False
   cover: False
 Python:
