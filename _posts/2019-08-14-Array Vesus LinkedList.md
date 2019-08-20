@@ -31,3 +31,31 @@ LinkedList도 단점이 존재한다. ArrayList는 무작위 접근(Random Acces
 사실 순차 접근도 참조의 지역성(locality of reference: 한번 참조한 데이터는 다시 참조될 가능성이 높고 참조된 데이터 주변의 데이터 역시 같이 참조될 가능성이 높다는 이론입니다.) 때문에 LinkedList 보다는 ArrayList가 훨씬 빠릅니다. n개의 자료를 저장할 때, ArrayList는 자료들을 하나의 연속적인 묶음으로 묶어 자료를 저장하는 반면, LinkedList는 자료들을 저장 공간에 불연속적인 단위로 저장하게 됩니다. 그렇기 때문에 LinkedList는 메모리 이곳저곳에 산재해 저장되어 있는 노드들을 접근하는데 ArrayList보다는 긴 지연 시간이 소모됩니다. LinkedList의 또 다른 단점은 참조자를 위해 추가적인 메모리를 할당해야 하는 점입니다. 자료들의 크기가 작은 리스트의 경우 참조자를 위한 추가적인 메모리할당은 비실용적일 수 있습니다.
 
 ## 정리
+<h2 id="table">Table</h2>
+
+<table>
+<tbody>
+<tr>
+<th>Table Header 1</th>
+<th>Table Header 2</th>
+<th>Table Header 3</th>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+</tr>
+<tr class="even">
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
