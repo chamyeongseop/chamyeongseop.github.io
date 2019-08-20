@@ -17,6 +17,9 @@ author: akas
 
 ## hosts 설정
 - Home 디렉토리에서 작업
+'''bash
+sudo vi /etc/host
+'''
+
 {% highlight shell %}
-sudo vi /etc/hosts
 {% endhighlight %}
