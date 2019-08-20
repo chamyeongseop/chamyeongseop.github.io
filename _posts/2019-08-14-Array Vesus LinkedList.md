@@ -10,7 +10,7 @@ class: post-template
 subclass: 'post tag-fables'
 logo: assets/images/profile2.png
 author: akas
-published: False
+published: true
 ---
 ## Array
 Array(배열)은 논리적 저장 순서와 물리적 저장 순서가 일치한다. 따라서 인덱스(index)를 활용하여, 특정 원소(element)로 접근할 수 있다. 따라서 찾고자 하는 원소의 인덱스 값을 알고 있으면 Big-O(1)에 해당 원소로 접근할 수 있다. 즉, Random Access가 가능하다는 장점이 존재한다.
@@ -20,7 +20,7 @@ Array(배열)은 논리적 저장 순서와 물리적 저장 순서가 일치한
 삽입의 경우도 마찬가지이다. 만약 첫번째 자리에 새로운 원소를 추가하고자 할 때, 나머지 원소들의 인덱스를 1 만큼 오른쪽으로 shift 작업이 필요하므로, 이 경우도 O(n)의 시간이 걸린다.
 
 
-## ArrayList Versus LinkedList
+## ArrayList VS LinkedList
 ArrayList는 데이터들이 순서대로 쭉 늘어선 배열의 형식을 취하고 있다. ArrayList는 사이즈가 고정되어 있기 때문에 사입 시 사이즈를 늘려주는 연산이 추가되어야 하고, 삭제 시에는 순차적인 인덱스 구조로 인해, 삭제 된 빈 인덱스를 채워야하는 연산이 추가되어야 한다. 따라서, 삽입 및 삭제가 빈번하게 발생하는 프로레스의 경우 시스템의 성능 저하를 일으키는 원인이 된다. 또한 자료들이 지속적으로 삭제되는 과정에서 ArrayList에서는 그 공간만큼 낭비되는 메모리가 많아지게 된다.
 
 
@@ -31,29 +31,29 @@ LinkedList도 단점이 존재한다. ArrayList는 무작위 접근(Random Acces
 사실 순차 접근도 참조의 지역성(locality of reference: 한번 참조한 데이터는 다시 참조될 가능성이 높고 참조된 데이터 주변의 데이터 역시 같이 참조될 가능성이 높다는 이론입니다.) 때문에 LinkedList 보다는 ArrayList가 훨씬 빠릅니다. n개의 자료를 저장할 때, ArrayList는 자료들을 하나의 연속적인 묶음으로 묶어 자료를 저장하는 반면, LinkedList는 자료들을 저장 공간에 불연속적인 단위로 저장하게 됩니다. 그렇기 때문에 LinkedList는 메모리 이곳저곳에 산재해 저장되어 있는 노드들을 접근하는데 ArrayList보다는 긴 지연 시간이 소모됩니다. LinkedList의 또 다른 단점은 참조자를 위해 추가적인 메모리를 할당해야 하는 점입니다. 자료들의 크기가 작은 리스트의 경우 참조자를 위한 추가적인 메모리할당은 비실용적일 수 있습니다.
 
 ## 정리
-<h2 id="table">Table</h2>
+<h2 id="table">LinkedList의 장/단점</h2>
 
 <table>
 <tbody>
 <tr>
-<th>Table Header 1</th>
-<th>Table Header 2</th>
-<th>Table Header 3</th>
+<th><center>장점</th>
+<th><center>단점</th>
 </tr>
 <tr>
-<td>Division 1</td>
-<td>Division 2</td>
-<td>Division 3</td>
+<td>자료의 삽입과 삭제가 용이하다.</td>
+<td>포인터의 사용으로 인해 저장 공간의 낭비가 있다.</td>
 </tr>
 <tr class="even">
-<td>Division 1</td>
-<td>Division 2</td>
-<td>Division 3</td>
+<td>리스트 내에서 자료의 이동이 필요하지 않다.</td>
+<td>알고리즘이 복잡하다.</td>
 </tr>
 <tr>
-<td>Division 1</td>
-<td>Division 2</td>
-<td>Division 3</td>
+<td>사용 후 기억 장소의 재사용이 가능하다.</td>
+<td>특정 자료의 탐색 시간이 많이 소요된다.</td>
+</tr>
+<tr>
+<td>연속적인 기억 장소의 할당이 필요하지 않다.</td>
+<td></td>
 </tr>
 </tbody>
 </table>
