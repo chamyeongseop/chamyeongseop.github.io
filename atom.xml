@@ -8,6 +8,22 @@
     
       
       <item>
+        <title>Array와 LinkedList 정의 및 비교</title>
+        
+          <description>&lt;h2 id=&quot;array&quot;&gt;Array&lt;/h2&gt;
+&lt;p&gt;Array(배열)은 논리적 저장 순서와 물리적 저장 순서가 일치한다. 따라서 인덱스(index)를 활용하여, 특정 원소(element)로 접근할 수 있다. 따라서 찾고자 하는 원소의 인덱스 값을 알고 있으면 Big-O(1)에 해당 원소로 접근할 수 있다. 즉, Random Access가 가능하다는 장점이 존재한다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 14 Aug 2019 10:18:00 +0000</pubDate>
+        <link>
+        /Array-Vesus-LinkedList</link>
+        <guid isPermaLink="true">/Array-Vesus-LinkedList</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Ensemble</title>
         
           <description>&lt;h2 id=&quot;머신러닝-bagging-boosting-stacking&quot;&gt;머신러닝 Bagging, Boosting, Stacking&lt;/h2&gt;
