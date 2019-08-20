@@ -810,8 +810,8 @@ Usage (In Ghost editor):
 
 .post-full-content code {
     padding: 0 5px 2px;
-    font-size: 3.0em;
-    line-height: 2em;
+    font-size: 1.5em;
+    line-height: 1em;
     font-weight: 400!important;
     background: var(--whitegrey);
     border-radius: 3px;
