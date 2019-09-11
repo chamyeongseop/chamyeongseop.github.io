@@ -10,6 +10,7 @@ class: post-template
 fonts: Nanum Gothic
 subclass: 'post tag-fables'
 author: akas
+published: true
 ---
 # 호스트 파일 설정
 ## hosts 파일 소개

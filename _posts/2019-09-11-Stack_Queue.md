@@ -10,6 +10,7 @@ class: post-template
 fonts: Nanum Gothic
 subclass: 'post tag-fables'
 author: akas
+published: true
 ---
 ### Stack
 
