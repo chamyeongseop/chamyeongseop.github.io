@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/author/akas/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-08-21T01:10:39+00:00</updated>
+  <updated>2019-09-11T00:01:28+00:00</updated>
   <id>/author/akas/feed.xml</id>
 
   
@@ -32,6 +32,103 @@
   
   
 
+  
+    <entry>
+      <title type="html">JVM 정리</title>
+      <link href="/JVM" rel="alternate" type="text/html" title="JVM 정리" />
+      <published>2019-08-21T10:18:00+00:00</published>
+      <updated>2019-08-21T10:18:00+00:00</updated>
+      <id>/JVM</id>
+      <content type="html" xml:base="/JVM">&lt;p&gt;개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.&lt;/p&gt;
+
+&lt;p&gt;##JVM이란&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;자바를 실행하기 위한 가상 컴퓨터&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jvm을-사용하는-이유&quot;&gt;JVM을 사용하는 이유?&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로, 이를 해석하고 실행할 수 있는 가상의 운영체제가 필요하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;JAVA 어플리케이션은 JVM과 상호작용하기 때문에, OS와 시스템에 독립적이라 다른 OS에서도 실행이 가능하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;바이트 코드는 모든 JVM에서 동일한 실행 결과가 나타나지만, JVM은 OS에 종속적이기 때문에 해당 OS에서 실행가능한 JVM을 설치해야한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jdk-java-development-kit-자바-개발-도구&quot;&gt;JDK (Java Development Kit, 자바 개발 도구)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;개발에 필요한 실행 파일(javac, 기타) + JRE(Java Runtime Environment, JVM과 Java API를 담고 있음)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;javac (Java compiler) : 자바소스코드를 바이트코드로 컴파일 한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;java는 자바 인터프리터(Interpreter)는 컴파일러가 생성한 바이트코드를 실행하는 프로그램이다.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;보통 인터프리터는 고급 언어로 작성 된 원시코드 명령어들을 한번에 한 줄씩 읽어들여서 실행하는 프로그램이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;고급 언어로 작성 된 프로그램들을 실행하는데는 2가지 방법이 존재한다.
+    &lt;ul&gt;
+      &lt;li&gt;가장 일반적인 방법은 프로그램을 컴파일 작업을 통해, 기계어 또는 바이트 코드로 번역함으로써, 컴퓨터가 실행할 수 있는 코드로 만들어주는 것이다.&lt;/li&gt;
+      &lt;li&gt;다른 하나는 프로그램을 인터프리터에 통과시킴으로써, 고급 명령어들을 중간 형태로 번역하여, 이를 실행한다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;jar는 압축 프로그램으로 클래스 파일과 프로그램의 실행과 관련된 파일을 하나의 jar파일로 압축시켜 놓는다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jvm이-자바-프로그램을-실행하는-과정&quot;&gt;JVM이 자바 프로그램을 실행하는 과정&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바 파일을 자바 컴파일로 컴파일을 수행한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;자바 인터프리터는 프로그램의 실행에 필요한 클래스 (클래스 파일)을 로드한다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;클래스 파일을 검사한다. (파일의 내부구조와 코드)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;지정된 클래스에서 main method를 호출한다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;jvm의-내부-구조&quot;&gt;JVM의 내부 구조&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/JVM1.JPG&quot; alt=&quot;JVM 구조&quot; title=&quot;JVM 구조&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;출처&quot;&gt;출처&lt;/h1&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Akas</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="JAVA" />
+      
+
+      
+        <summary type="html">개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Array와 LinkedList 정의 및 비교</title>

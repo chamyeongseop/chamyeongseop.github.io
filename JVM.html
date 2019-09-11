@@ -11,7 +11,7 @@
 
 
 
-    <title>Array와 LinkedList 정의 및 비교</title>
+    <title>JVM 정리</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -36,30 +36,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="The machine learning enginner" />
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/Array-Vesus-LinkedList" />
+    <link rel="canonical" href="/JVM" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Akas Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Array와 LinkedList 정의 및 비교" />
-    <meta property="og:description" content="Array Array(배열)은 논리적 저장 순서와 물리적 저장 순서가 일치한다. 따라서 인덱스(index)를 활용하여, 특정 원소(element)로 접근할 수 있다. 따라서 찾고자 하는 원소의 인덱스 값을 알고 있으면 Big-O(1)에 해당 원소로 접근할 수 있다. 즉, Random Access가 가능하다는 장점이 존재한다. 하지만 삭제(Delete) 또는 삽입(Insert)의 작업을 수행할 때, 특정 원소에 접근하여 작업을 완료한 뒤(O(1))," />
-    <meta property="og:url" content="/Array-Vesus-LinkedList" />
-    <meta property="og:image" content="/assets/images/summit.jpg" />
+    <meta property="og:title" content="JVM 정리" />
+    <meta property="og:description" content="개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다. ##JVM이란 자바를 실행하기 위한 가상 컴퓨터 JVM을 사용하는 이유? 자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다. 자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로," />
+    <meta property="og:url" content="/JVM" />
+    <meta property="og:image" content="/assets/images/fables.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/chamyeongseop" />
     <meta property="article:author" content="https://www.facebook.com/chamyeongseop" />
-    <meta property="article:published_time" content="2019-08-14T10:18:00+00:00" />
-    <meta property="article:modified_time" content="2019-08-14T10:18:00+00:00" />
-    <meta property="article:tag" content="Ds" />
+    <meta property="article:published_time" content="2019-08-21T10:18:00+00:00" />
+    <meta property="article:modified_time" content="2019-08-21T10:18:00+00:00" />
+    <meta property="article:tag" content="Java" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Array와 LinkedList 정의 및 비교" />
-    <meta name="twitter:description" content="Array Array(배열)은 논리적 저장 순서와 물리적 저장 순서가 일치한다. 따라서 인덱스(index)를 활용하여, 특정 원소(element)로 접근할 수 있다. 따라서 찾고자 하는 원소의 인덱스 값을 알고 있으면 Big-O(1)에 해당 원소로 접근할 수 있다. 즉, Random Access가 가능하다는 장점이 존재한다. 하지만 삭제(Delete) 또는 삽입(Insert)의 작업을 수행할 때, 특정 원소에 접근하여 작업을 완료한 뒤(O(1))," />
+    <meta name="twitter:title" content="JVM 정리" />
+    <meta name="twitter:description" content="개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다. ##JVM이란 자바를 실행하기 위한 가상 컴퓨터 JVM을 사용하는 이유? 자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다. 자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로," />
     <meta name="twitter:url" content="/" />
-    <meta name="twitter:image" content="/assets/images/summit.jpg" />
+    <meta name="twitter:image" content="/assets/images/fables.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Akas Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Ds" />
+    <meta name="twitter:data2" content="Java" />
     <meta name="twitter:site" content="@tryghost" />
     <meta name="twitter:creator" content="@tryghost" />
     <meta property="og:image:width" content="1400" />
@@ -74,18 +74,18 @@
         "name": "Akas Blog",
         "logo": "/assets/images/blog-icon.png"
     },
-    "url": "/Array-Vesus-LinkedList",
+    "url": "/JVM",
     "image": {
         "@type": "ImageObject",
-        "url": "/assets/images/summit.jpg",
+        "url": "/assets/images/fables.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/Array-Vesus-LinkedList"
+        "@id": "/JVM"
     },
-    "description": "Array Array(배열)은 논리적 저장 순서와 물리적 저장 순서가 일치한다. 따라서 인덱스(index)를 활용하여, 특정 원소(element)로 접근할 수 있다. 따라서 찾고자 하는 원소의 인덱스 값을 알고 있으면 Big-O(1)에 해당 원소로 접근할 수 있다. 즉, Random Access가 가능하다는 장점이 존재한다. 하지만 삭제(Delete) 또는 삽입(Insert)의 작업을 수행할 때, 특정 원소에 접근하여 작업을 완료한 뒤(O(1)),"
+    "description": "개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다. ##JVM이란 자바를 실행하기 위한 가상 컴퓨터 JVM을 사용하는 이유? 자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다. 자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로,"
 }
     </script>
 
@@ -98,7 +98,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Array와 LinkedList 정의 및 비교" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="JVM 정리" href="/feed.xml" />
 
 
 </head>
@@ -160,72 +160,90 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="14 August 2019">14 August 2019</time>
+                    <time class="post-full-meta-date" datetime="21 August 2019">21 August 2019</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/ds/'>DS</a>
+                               <a href='/tag/java/'>JAVA</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">Array와 LinkedList 정의 및 비교</h1>
+                <h1 class="post-full-title">JVM 정리</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/assets/images/summit.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/images/fables.jpg)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <h2 id="array">Array</h2>
-<p>Array(배열)은 논리적 저장 순서와 물리적 저장 순서가 일치한다. 따라서 인덱스(index)를 활용하여, 특정 원소(element)로 접근할 수 있다. 따라서 찾고자 하는 원소의 인덱스 값을 알고 있으면 Big-O(1)에 해당 원소로 접근할 수 있다. 즉, Random Access가 가능하다는 장점이 존재한다.</p>
+                    <p>개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.</p>
 
-<p>하지만 삭제(Delete) 또는 삽입(Insert)의 작업을 수행할 때, 특정 원소에 접근하여 작업을 완료한 뒤(O(1)), 한 가지 작업을 추가적으로 수행해야한다. 만약 배열의 원소 중 어느 원소를 삭제했다고 했을 때, 배열의 연속적인 특징이 깨지게 된다. 즉 빈 공간이 생기는 것이다. 따라서 삭제한 원소보다 큰 인덱스를 갖는 원소들을 왼쪽 또는 오른쪽으로 이동(shift)해야 하는 비용(cost)이 발생하고 이 경우의 시간 복잡도는 O(n)가 된다. 그렇기 때문에 Array에서 삭제 작업으로 발생되는 time complexity의 worst case 는 O(n)이 된다.</p>
+<p>##JVM이란</p>
+<ul>
+  <li>자바를 실행하기 위한 가상 컴퓨터</li>
+</ul>
 
-<p>삽입의 경우도 마찬가지이다. 만약 첫번째 자리에 새로운 원소를 추가하고자 할 때, 나머지 원소들의 인덱스를 1 만큼 오른쪽으로 shift 작업이 필요하므로, 이 경우도 O(n)의 시간이 걸린다.</p>
+<h2 id="jvm을-사용하는-이유">JVM을 사용하는 이유?</h2>
+<ul>
+  <li>
+    <p>자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다.</p>
+  </li>
+  <li>
+    <p>자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로, 이를 해석하고 실행할 수 있는 가상의 운영체제가 필요하다.</p>
+  </li>
+  <li>
+    <p>JAVA 어플리케이션은 JVM과 상호작용하기 때문에, OS와 시스템에 독립적이라 다른 OS에서도 실행이 가능하다.</p>
+  </li>
+  <li>
+    <p>바이트 코드는 모든 JVM에서 동일한 실행 결과가 나타나지만, JVM은 OS에 종속적이기 때문에 해당 OS에서 실행가능한 JVM을 설치해야한다.</p>
+  </li>
+</ul>
 
-<h2 id="arraylist-vs-linkedlist">ArrayList VS LinkedList</h2>
-<p>ArrayList는 데이터들이 순서대로 쭉 늘어선 배열의 형식을 취하고 있다. ArrayList는 사이즈가 고정되어 있기 때문에 사입 시 사이즈를 늘려주는 연산이 추가되어야 하고, 삭제 시에는 순차적인 인덱스 구조로 인해, 삭제 된 빈 인덱스를 채워야하는 연산이 추가되어야 한다. 따라서, 삽입 및 삭제가 빈번하게 발생하는 프로레스의 경우 시스템의 성능 저하를 일으키는 원인이 된다. 또한 자료들이 지속적으로 삭제되는 과정에서 ArrayList에서는 그 공간만큼 낭비되는 메모리가 많아지게 된다.</p>
+<h2 id="jdk-java-development-kit-자바-개발-도구">JDK (Java Development Kit, 자바 개발 도구)</h2>
+<ul>
+  <li>
+    <p>개발에 필요한 실행 파일(javac, 기타) + JRE(Java Runtime Environment, JVM과 Java API를 담고 있음)</p>
+  </li>
+  <li>
+    <p>javac (Java compiler) : 자바소스코드를 바이트코드로 컴파일 한다.</p>
+  </li>
+  <li>java는 자바 인터프리터(Interpreter)는 컴파일러가 생성한 바이트코드를 실행하는 프로그램이다.</li>
+  <li>
+    <p>보통 인터프리터는 고급 언어로 작성 된 원시코드 명령어들을 한번에 한 줄씩 읽어들여서 실행하는 프로그램이다.</p>
+  </li>
+  <li>고급 언어로 작성 된 프로그램들을 실행하는데는 2가지 방법이 존재한다.
+    <ul>
+      <li>가장 일반적인 방법은 프로그램을 컴파일 작업을 통해, 기계어 또는 바이트 코드로 번역함으로써, 컴퓨터가 실행할 수 있는 코드로 만들어주는 것이다.</li>
+      <li>다른 하나는 프로그램을 인터프리터에 통과시킴으로써, 고급 명령어들을 중간 형태로 번역하여, 이를 실행한다.</li>
+    </ul>
+  </li>
+  <li>jar는 압축 프로그램으로 클래스 파일과 프로그램의 실행과 관련된 파일을 하나의 jar파일로 압축시켜 놓는다.</li>
+</ul>
 
-<p>LinkedList는 각각의 원소(element)들이 서로 자료의 주소 값으로 연결되어 있는 구조이다. 따라서 몇 개의 참조자만 다른 값으로 변경한다면, 삭제와 삽입을 O(1)에 해결 할 수 있다. LinkedLisst는 ArrayList에서 발생하는 문제를 연결 형태(Linked)로 해결하여, ArrayList에서 뒤로 밀거나 채우는 작업 없이 단지 주소만 서로 연결시켜 준다면, 추가 및 삭제가 ArrayList보다 빠르고 용이하다. 따라서 삽입 및 삭제가 빈번하게 발생하는 프로세스의 경우에는 LinkedList를 사용하여, 시스템을 구현하는 것이 바람직하다.</p>
+<h2 id="jvm이-자바-프로그램을-실행하는-과정">JVM이 자바 프로그램을 실행하는 과정</h2>
+<ol>
+  <li>
+    <p>자바 파일을 자바 컴파일로 컴파일을 수행한다.</p>
+  </li>
+  <li>
+    <p>자바 인터프리터는 프로그램의 실행에 필요한 클래스 (클래스 파일)을 로드한다.</p>
+  </li>
+  <li>
+    <p>클래스 파일을 검사한다. (파일의 내부구조와 코드)</p>
+  </li>
+  <li>
+    <p>지정된 클래스에서 main method를 호출한다.</p>
+  </li>
+</ol>
 
-<p>LinkedList도 단점이 존재한다. ArrayList는 무작위 접근(Random Access)가 가능하지만, LinkedList에서는 순차접근(Sequential Access)만이 가능하다. 특히 LinkedList는 단방향성을 갖고 있기 때문에 인덱스를 이용하여, 자료를 검색하는 어플리케이션에는 적합하지가 않다.</p>
+<h2 id="jvm의-내부-구조">JVM의 내부 구조</h2>
+<p><img src="/assets/images/JVM1.JPG" alt="JVM 구조" title="JVM 구조" /></p>
 
-<p>사실 순차 접근도 참조의 지역성(locality of reference: 한번 참조한 데이터는 다시 참조될 가능성이 높고 참조된 데이터 주변의 데이터 역시 같이 참조될 가능성이 높다는 이론입니다.) 때문에 LinkedList 보다는 ArrayList가 훨씬 빠릅니다. n개의 자료를 저장할 때, ArrayList는 자료들을 하나의 연속적인 묶음으로 묶어 자료를 저장하는 반면, LinkedList는 자료들을 저장 공간에 불연속적인 단위로 저장하게 됩니다. 그렇기 때문에 LinkedList는 메모리 이곳저곳에 산재해 저장되어 있는 노드들을 접근하는데 ArrayList보다는 긴 지연 시간이 소모됩니다. LinkedList의 또 다른 단점은 참조자를 위해 추가적인 메모리를 할당해야 하는 점입니다. 자료들의 크기가 작은 리스트의 경우 참조자를 위한 추가적인 메모리할당은 비실용적일 수 있습니다.</p>
-
-<h2 id="정리">정리</h2>
-<h2 id="table">LinkedList의 장/단점</h2>
-
-<table>
-<tbody>
-<tr>
-<th><center>장점&lt;/th&gt;
-<th><center>단점&lt;/th&gt;
-&lt;/tr&gt;
-<tr>
-<td>자료의 삽입과 삭제가 용이하다.</td>
-<td>포인터의 사용으로 인해 저장 공간의 낭비가 있다.</td>
-</tr>
-<tr class="even">
-<td>리스트 내에서 자료의 이동이 필요하지 않다.</td>
-<td>알고리즘이 복잡하다.</td>
-</tr>
-<tr>
-<td>사용 후 기억 장소의 재사용이 가능하다.</td>
-<td>특정 자료의 탐색 시간이 많이 소요된다.</td>
-</tr>
-<tr>
-<td>연속적인 기억 장소의 할당이 필요하지 않다.</td>
-<td></td>
-</tr>
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-<hr />
-</center></th></center></th></tr></tbody></table>
+<h1 id="출처">출처</h1>
 
                 </div>
             </section>
@@ -313,26 +331,29 @@ into the {body} of the default.hbs template -->
 
             <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
             
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
                 
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/JVM">
-                <div class="post-card-image" style="background-image: url(/assets/images/fables.jpg)"></div>
+            <a class="post-card-image-link" href="/Array-Vesus-LinkedList">
+                <div class="post-card-image" style="background-image: url(/assets/images/summit.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/JVM">
+            <a class="post-card-content-link" href="/Array-Vesus-LinkedList">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Java</span>
+                                <span class="post-card-tags">Ds</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">JVM 정리</h2>
+                    <h2 class="post-card-title">Array와 LinkedList 정의 및 비교</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -365,60 +386,6 @@ into the {body} of the default.hbs template -->
 
             
 
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/Ensemble">
-                <div class="post-card-image" style="background-image: url(/assets/images/water.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/Ensemble">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Ml</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Ensemble</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/ghost.png" alt="Ghost" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/ghost/">Ghost</a>
-                        </span>
-                    
-                
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-            
-
         </div>
     </div>
 </aside>
@@ -434,18 +401,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Array와 LinkedList 정의 및 비교</div>
+    <div class="floating-header-title">JVM 정리</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Array%EC%99%80+LinkedList+%EC%A0%95%EC%9D%98+%EB%B0%8F+%EB%B9%84%EA%B5%90&amp;url=https://github.com/chamyeongseop/chamyeongseop.github.ioArray-Vesus-LinkedList"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=JVM+%EC%A0%95%EB%A6%AC&amp;url=https://github.com/chamyeongseop/chamyeongseop.github.ioJVM"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/chamyeongseop/chamyeongseop.github.ioArray-Vesus-LinkedList"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/chamyeongseop/chamyeongseop.github.ioJVM"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

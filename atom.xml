@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>JVM 정리</title>
+        
+          <description>&lt;p&gt;개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 21 Aug 2019 10:18:00 +0000</pubDate>
+        <link>
+        /JVM</link>
+        <guid isPermaLink="true">/JVM</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Array와 LinkedList 정의 및 비교</title>
         
           <description>&lt;h2 id=&quot;array&quot;&gt;Array&lt;/h2&gt;
