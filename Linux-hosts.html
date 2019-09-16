@@ -11,7 +11,7 @@
 
 
 
-    <title>JVM 정리</title>
+    <title>/etc/hosts 설정</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -36,30 +36,30 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="The machine learning enginner" />
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/JVM" />
+    <link rel="canonical" href="/Linux-hosts" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Akas Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="JVM 정리" />
-    <meta property="og:description" content="개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다. ##JVM이란 자바를 실행하기 위한 가상 컴퓨터 JVM을 사용하는 이유? 자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다. 자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로," />
-    <meta property="og:url" content="/JVM" />
-    <meta property="og:image" content="/assets/images/fables.jpg" />
+    <meta property="og:title" content="/etc/hosts 설정" />
+    <meta property="og:description" content="호스트 파일 설정 hosts 파일 소개 /etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다. 리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다. “NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다. 호스트(hosts) 설정 /etc/hosts 파일을 편집한다. 각 서버들의 IP 주소" />
+    <meta property="og:url" content="/Linux-hosts" />
+    <meta property="og:image" content="/assets/images/summit.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/chamyeongseop" />
     <meta property="article:author" content="https://www.facebook.com/chamyeongseop" />
-    <meta property="article:published_time" content="2019-08-21T10:18:00+00:00" />
-    <meta property="article:modified_time" content="2019-08-21T10:18:00+00:00" />
-    <meta property="article:tag" content="Java" />
+    <meta property="article:published_time" content="2019-09-11T09:00:00+00:00" />
+    <meta property="article:modified_time" content="2019-09-11T09:00:00+00:00" />
+    <meta property="article:tag" content="Linux" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="JVM 정리" />
-    <meta name="twitter:description" content="개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다. ##JVM이란 자바를 실행하기 위한 가상 컴퓨터 JVM을 사용하는 이유? 자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다. 자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로," />
+    <meta name="twitter:title" content="/etc/hosts 설정" />
+    <meta name="twitter:description" content="호스트 파일 설정 hosts 파일 소개 /etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다. 리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다. “NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다. 호스트(hosts) 설정 /etc/hosts 파일을 편집한다. 각 서버들의 IP 주소" />
     <meta name="twitter:url" content="/" />
-    <meta name="twitter:image" content="/assets/images/fables.jpg" />
+    <meta name="twitter:image" content="/assets/images/summit.jpg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Akas Blog" />
     <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Java" />
+    <meta name="twitter:data2" content="Linux" />
     <meta name="twitter:site" content="@tryghost" />
     <meta name="twitter:creator" content="@tryghost" />
     <meta property="og:image:width" content="1400" />
@@ -74,18 +74,18 @@
         "name": "Akas Blog",
         "logo": "/assets/images/blog-icon.png"
     },
-    "url": "/JVM",
+    "url": "/Linux-hosts",
     "image": {
         "@type": "ImageObject",
-        "url": "/assets/images/fables.jpg",
+        "url": "/assets/images/summit.jpg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/JVM"
+        "@id": "/Linux-hosts"
     },
-    "description": "개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다. ##JVM이란 자바를 실행하기 위한 가상 컴퓨터 JVM을 사용하는 이유? 자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다. 자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로,"
+    "description": "호스트 파일 설정 hosts 파일 소개 /etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다. 리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다. “NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다. 호스트(hosts) 설정 /etc/hosts 파일을 편집한다. 각 서버들의 IP 주소"
 }
     </script>
 
@@ -98,7 +98,7 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="JVM 정리" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="/etc/hosts 설정" href="/feed.xml" />
 
 
 </head>
@@ -160,90 +160,95 @@ into the {body} of the default.hbs template -->
 
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="21 August 2019">21 August 2019</time>
+                    <time class="post-full-meta-date" datetime="11 September 2019">11 September 2019</time>
                     
                         <span class="date-divider">/</span>
                         
                             
-                               <a href='/tag/java/'>JAVA</a>
+                               <a href='/tag/linux/'>LINUX</a>
                             
                         
                     
                 </section>
-                <h1 class="post-full-title">JVM 정리</h1>
+                <h1 class="post-full-title">/etc/hosts 설정</h1>
             </header>
 
             
-            <figure class="post-full-image" style="background-image: url(/assets/images/fables.jpg)">
+            <figure class="post-full-image" style="background-image: url(/assets/images/summit.jpg)">
             </figure>
             
 
             <section class="post-full-content">
                 <div class="kg-card-markdown">
-                    <p>개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.</p>
-
-<p>##JVM이란</p>
+                    <h1 id="호스트-파일-설정">호스트 파일 설정</h1>
+<h2 id="hosts-파일-소개">hosts 파일 소개</h2>
 <ul>
-  <li>자바를 실행하기 위한 가상 컴퓨터</li>
+  <li>/etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다.</li>
+  <li>리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다.</li>
+  <li>“NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.</li>
 </ul>
 
-<h2 id="jvm을-사용하는-이유">JVM을 사용하는 이유?</h2>
+<h2 id="호스트hosts-설정">호스트(hosts) 설정</h2>
 <ul>
-  <li>
-    <p>자바의 특징은 운영체제, 즉 시스템에 독립적이다. JVM이 자바를 실행하기 위한 역할을 하기 때문에 가능하다.</p>
-  </li>
-  <li>
-    <p>자바 프로그램은 완전한 기계어가 아닌, 중간 단계의 바이트 코드이므로, 이를 해석하고 실행할 수 있는 가상의 운영체제가 필요하다.</p>
-  </li>
-  <li>
-    <p>JAVA 어플리케이션은 JVM과 상호작용하기 때문에, OS와 시스템에 독립적이라 다른 OS에서도 실행이 가능하다.</p>
-  </li>
-  <li>
-    <p>바이트 코드는 모든 JVM에서 동일한 실행 결과가 나타나지만, JVM은 OS에 종속적이기 때문에 해당 OS에서 실행가능한 JVM을 설치해야한다.</p>
-  </li>
+  <li>/etc/hosts 파일을 편집한다.</li>
+  <li>각 서버들의 IP 주소 및 도메인명과 Alias 등의 정보를 넣어준다.</li>
 </ul>
 
-<h2 id="jdk-java-development-kit-자바-개발-도구">JDK (Java Development Kit, 자바 개발 도구)</h2>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># hosts 설정 방법</span>
+<span class="o">[</span>root@admin ~]# vi /etc/hosts
+101.101.101.101 test1.도메인명.com test1 <span class="c"># IP주소 도메인명 Alias(도메인의 별칭) 순으로 입력</span>
+101.101.101.102 test2.도메인명.com test2
+101.101.101.103 test3.도메인명.com test3
+101.101.101.104 test4.도메인명.com test4</code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># 도메인명으로 PING TEST</span>
+<span class="o">[</span>root@admin ~]# ping test1.도메인명.com
+PING test1.도메인명.com <span class="o">(</span>101.101.101.101<span class="o">)</span> 4<span class="o">(</span>8<span class="o">)</span> bytes of data.
+
+<span class="c"># ALIAS로 PING TEST</span>
+<span class="o">[</span>root@admin ~]# ping test1
+PING test1 <span class="o">(</span>101.101.101.101<span class="o">)</span> 56<span class="o">(</span>84<span class="o">)</span> bytes of data.</code></pre></figure>
+
+<h2 id="호스트명-변경">호스트명 변경</h2>
+<h3 id="hostnamectl-명령어를-활용하는-방법">hostnamectl 명령어를 활용하는 방법</h3>
 <ul>
-  <li>
-    <p>개발에 필요한 실행 파일(javac, 기타) + JRE(Java Runtime Environment, JVM과 Java API를 담고 있음)</p>
-  </li>
-  <li>
-    <p>javac (Java compiler) : 자바소스코드를 바이트코드로 컴파일 한다.</p>
-  </li>
-  <li>java는 자바 인터프리터(Interpreter)는 컴파일러가 생성한 바이트코드를 실행하는 프로그램이다.</li>
-  <li>
-    <p>보통 인터프리터는 고급 언어로 작성 된 원시코드 명령어들을 한번에 한 줄씩 읽어들여서 실행하는 프로그램이다.</p>
-  </li>
-  <li>고급 언어로 작성 된 프로그램들을 실행하는데는 2가지 방법이 존재한다.
-    <ul>
-      <li>가장 일반적인 방법은 프로그램을 컴파일 작업을 통해, 기계어 또는 바이트 코드로 번역함으로써, 컴퓨터가 실행할 수 있는 코드로 만들어주는 것이다.</li>
-      <li>다른 하나는 프로그램을 인터프리터에 통과시킴으로써, 고급 명령어들을 중간 형태로 번역하여, 이를 실행한다.</li>
-    </ul>
-  </li>
-  <li>jar는 압축 프로그램으로 클래스 파일과 프로그램의 실행과 관련된 파일을 하나의 jar파일로 압축시켜 놓는다.</li>
+  <li>Network hostname을 test.domainName.com으로 설정</li>
+  <li>Home 디렉토리에서 작업을 수행한다.</li>
 </ul>
 
-<h2 id="jvm이-자바-프로그램을-실행하는-과정">JVM이 자바 프로그램을 실행하는 과정</h2>
-<ol>
-  <li>
-    <p>자바 파일을 자바 컴파일로 컴파일을 수행한다.</p>
-  </li>
-  <li>
-    <p>자바 인터프리터는 프로그램의 실행에 필요한 클래스 (클래스 파일)을 로드한다.</p>
-  </li>
-  <li>
-    <p>클래스 파일을 검사한다. (파일의 내부구조와 코드)</p>
-  </li>
-  <li>
-    <p>지정된 클래스에서 main method를 호출한다.</p>
-  </li>
-</ol>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@admin ~]# <span class="nb">sudo </span>hostnamectl set-hostname test.</code></pre></figure>
 
-<h2 id="jvm의-내부-구조">JVM의 내부 구조</h2>
-<p><img src="/assets/images/JVM1.JPG" alt="JVM 구조" title="JVM 구조" /></p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># 변경 된 호스트명을 확인할 수 있다.</span>
+<span class="o">[</span>root@admin ~]# hostname</code></pre></figure>
 
-<h1 id="출처">출처</h1>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># 출력 결과</span>
+<span class="o">[</span>root@admin ~]# test1.도메인명.com</code></pre></figure>
+
+<h2 id="shell-script를-활용하여-호스트-이름을-변경하는-방법">Shell script를 활용하여, 호스트 이름을 변경하는 방법</h2>
+<ul>
+  <li>bash 파일을 활용하여, 전체 서버에 명령어를 전달하려고 한다. change_hosts_name.sh 이름의 bash 파일을 생성해보자.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># bash 파일을 실행하여, 리눅스 터널링을 수행할 것이다.</span>
+<span class="o">[</span>root@admin ~]# vi change_hosts_name.sh</code></pre></figure>
+
+<ul>
+  <li>host 안에는 hostname 목록들이 존재하며, 아래의 내용을 change_hosts_name.sh 파일에 넣어줌으로써, bash 파일을 수정해준다.</li>
+  <li>내용 수정이 끝난 후에는 vi 명령어를 통해 쓰기 후 저장을 한다.(ESC키 → :wq 입력 후 엔터키로 빠져나온다.)</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+<span class="k">for </span>host <span class="k">in</span> <span class="sb">`</span><span class="nb">cat </span>hosts<span class="sb">`</span><span class="p">;</span>
+<span class="k">do
+    </span>ssh <span class="nt">-p</span> <span class="s2">"portNumber"</span> <span class="s2">"userName"</span><span class="s1">'@'</span><span class="nv">$host</span> <span class="nb">sudo </span>hostnamectl set-hostname <span class="nv">$host</span><span class="p">;</span>
+<span class="k">done</span></code></pre></figure>
+
+<ul>
+  <li>bash 파일을 실행해준다.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[</span>root@admin ~]# sh ./change_hosts_name.sh</code></pre></figure>
+
 
                 </div>
             </section>
@@ -335,7 +340,7 @@ into the {body} of the default.hbs template -->
                         <header class="read-next-card-header">
                             <small class="read-next-card-header-sitetitle">&mdash; Akas Blog &mdash;</small>
                             
-                                <h3 class="read-next-card-header-title"><a href="/tag/java/">Java</a></h3>
+                                <h3 class="read-next-card-header-title"><a href="/tag/linux/">Linux</a></h3>
                             
                         </header>
                         <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
@@ -345,15 +350,6 @@ into the {body} of the default.hbs template -->
                                 
                                 
                                   
-                                    
-                                        
-                                        
-                                            <li><a href="/Size_Length">JAVA의 length, length(), size 비교</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
                                 
                                   
                                 
@@ -368,11 +364,39 @@ into the {body} of the default.hbs template -->
                                   
                                 
                                   
+                                    
+                                        
+                                        
+                                            <li><a href="/Ansible">Ansible</a></li>
+                                        
+                                    
+                                  
                                 
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/Set-Host_txt">호스트(host) 파일 설정</a></li>
+                                        
+                                    
                                   
                                 
                                   
                                 
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">CentOS 환경에서 포트없이 사용하기.</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
                                   
                                 
                                   
@@ -380,9 +404,9 @@ into the {body} of the default.hbs template -->
                             </ul>
                         </div>
                         <footer class="read-next-card-footer">
-                            <a href="/tag/java/">
+                            <a href="/tag/linux/">
                                 
-                                    See all 1 posts  →
+                                    See all 4 posts  →
                                 
                             </a>
                         </footer>
@@ -396,22 +420,22 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/Linux-hosts">
+            <a class="post-card-image-link" href="/Stack_Queue">
                 <div class="post-card-image" style="background-image: url(/assets/images/summit.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Linux-hosts">
+            <a class="post-card-content-link" href="/Stack_Queue">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Linux</span>
+                                <span class="post-card-tags">Ds</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">/etc/hosts 설정</h2>
+                    <h2 class="post-card-title">Stack 과 Queue 정리</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -450,22 +474,22 @@ into the {body} of the default.hbs template -->
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/Array-Vesus-LinkedList">
-                <div class="post-card-image" style="background-image: url(/assets/images/summit.jpg)"></div>
+            <a class="post-card-image-link" href="/JVM">
+                <div class="post-card-image" style="background-image: url(/assets/images/fables.jpg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/Array-Vesus-LinkedList">
+            <a class="post-card-content-link" href="/JVM">
                 <header class="post-card-header">
                     
                         
                             
-                                <span class="post-card-tags">Ds</span>
+                                <span class="post-card-tags">Java</span>
                             
                         
                     
 
-                    <h2 class="post-card-title">Array와 LinkedList 정의 및 비교</h2>
+                    <h2 class="post-card-title">JVM 정리</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -513,18 +537,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">JVM 정리</div>
+    <div class="floating-header-title">/etc/hosts 설정</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=JVM+%EC%A0%95%EB%A6%AC&amp;url=https://github.com/chamyeongseop/chamyeongseop.github.ioJVM"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%2Fetc%2Fhosts+%EC%84%A4%EC%A0%95&amp;url=https://github.com/chamyeongseop/chamyeongseop.github.ioLinux-hosts"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/chamyeongseop/chamyeongseop.github.ioJVM"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/chamyeongseop/chamyeongseop.github.ioLinux-hosts"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

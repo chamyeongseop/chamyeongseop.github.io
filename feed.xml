@@ -1,4 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-11T06:51:41+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">JVM 정리</title><link href="/JVM" rel="alternate" type="text/html" title="JVM 정리" /><published>2019-08-21T10:18:00+00:00</published><updated>2019-08-21T10:18:00+00:00</updated><id>/JVM</id><content type="html" xml:base="/JVM">&lt;p&gt;개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-16T08:03:37+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">JAVA의 length, length(), size 비교</title><link href="/Size_Length" rel="alternate" type="text/html" title="JAVA의 length, length(), size 비교" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Size_Length</id><content type="html" xml:base="/Size_Length">&lt;h1 id=&quot;java의-length-length-size-사용-및-비교&quot;&gt;JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교&lt;/h1&gt;
+
+&lt;h2 id=&quot;length&quot;&gt;length&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;arrays (int[], double[], String[]) : 배열의 길이를 알려 할때 사용한다.&lt;/li&gt;
+  &lt;li&gt;메소드가 아니므로, Object로 사용하지 않는다. 따라서 오직 배열에서만 사용할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;length-1&quot;&gt;length()&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;String related Object (String, StringBuilder etc) : 이것은 문자열의 길이를 알고자 할때 사용된다.&lt;/li&gt;
+  &lt;li&gt;스트링은 배열이 아니므로, .length를 사용할 수 없으며, 컬렉션 또한 아니기 때문에, .size() 도 사용할 수 없다. 이를 위해 length()가 설계되었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;size&quot;&gt;size()&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Collection Object (ArrayList, Set etc) : 컬렉션 타입의 길이를 확인할때 사용된다.&lt;/li&gt;
+  &lt;li&gt;메소드이므로, Collection에 사용될 수 있다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akas</name></author><category term="JAVA" /><summary type="html">JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교</summary></entry><entry><title type="html">Stack 과 Queue 정리</title><link href="/Stack_Queue" rel="alternate" type="text/html" title="Stack 과 Queue 정리" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Stack_Queue</id><content type="html" xml:base="/Stack_Queue">&lt;h1 id=&quot;stack&quot;&gt;Stack&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;한 쪽 끝에서만 자료를 넣고 뺄 수 있는 자료 구조.&lt;/li&gt;
+  &lt;li&gt;마지막으로 넣은 것이 가장 먼저 나오기 때문에 Last In First Out (LIFO) 라고 한다.&lt;/li&gt;
+  &lt;li&gt;“스택”에서 데이터가 들어가고 나가는 곳을 “한 지점”에 고정을 시켜놓고, 명령어를 수행한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;stack-명령어-정리&quot;&gt;Stack 명령어 정리&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;push : 스택에 자료를 넣는 연산&lt;/li&gt;
+  &lt;li&gt;pop : 스택에 자료를 빼는 연산&lt;/li&gt;
+  &lt;li&gt;top : 스택의 가장 위에 있는 자료를 보는 연산&lt;/li&gt;
+  &lt;li&gt;empty : 스택이 비어있는지 아닌지를 알아보는 연산&lt;/li&gt;
+  &lt;li&gt;size : 스택에 저장되어 있는 자료의 개수를 알아보는 연산&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;대표-문제-유형&quot;&gt;대표 문제 유형&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;괄호 문제(짝 맞추기 문제)&lt;/li&gt;
+  &lt;li&gt;스택 수열&lt;/li&gt;
+  &lt;li&gt;단어 뒤집기&lt;/li&gt;
+  &lt;li&gt;에디터 문제&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;queue&quot;&gt;Queue&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;한 쪽 끝에서만 자료를 넣고, 다른 한 쪽 끝에서만 뺄 수 있는 자료 구조&lt;/li&gt;
+  &lt;li&gt;먼저 넣은 것이 가장 먼저 나오기 때문에 First In First Out(FIFO) 라고 한다.&lt;/li&gt;
+  &lt;li&gt;삭제 연산은 Begin 쪽에, 삽입 연산은 End 쪽에서 이루어진다.&lt;/li&gt;
+  &lt;li&gt;C++의 경우에는 STL의 queue를 사용하고, Java의 경우에는 java.util.Queue를 사용하는 것이 좋다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;queue-명령어-정리&quot;&gt;Queue 명령어 정리&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;push : 큐에 자료를 넣는 연산&lt;/li&gt;
+  &lt;li&gt;pop : 큐에서 자료를 빼는 연산&lt;/li&gt;
+  &lt;li&gt;front : 큐의 가장 앞에 있는 자료를 보는 연산&lt;/li&gt;
+  &lt;li&gt;back : 큐의 가장 뒤에 있는 자료를 보는 연산&lt;/li&gt;
+  &lt;li&gt;empty : 큐가 비어있는지 아닌지를 알아보는 연산&lt;/li&gt;
+  &lt;li&gt;size : 큐에 저장되어있는 자료의 개수를 알아보는 연산&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;대표-문제-유형-1&quot;&gt;대표 문제 유형&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;조세퍼스 문제&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;deque-덱&quot;&gt;Deque (덱)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;양 끝에서만 자료를 넣고 양 끝에서 뺄 수 있는 자료구조&lt;/li&gt;
+  &lt;li&gt;Double-ended queue의 약자&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deque-명령어-정리&quot;&gt;Deque 명령어 정리&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;push_front : 큐에 자료를 넣는 연산&lt;/li&gt;
+  &lt;li&gt;pop : 큐에서 자료를 넣는 연산&lt;/li&gt;
+  &lt;li&gt;front : 큐의 가장 앞에 있는 자료를 보는 연산&lt;/li&gt;
+  &lt;li&gt;back : 큐의 가장 뒤에 있는 자료를 보는 연산&lt;/li&gt;
+  &lt;li&gt;empty : 큐가 비어있는지 아닌지를 알아보는 연산&lt;/li&gt;
+  &lt;li&gt;size : 큐에 저장되어 있는 자료의 개수를 알아보는 연산&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akas</name></author><category term="DS" /><summary type="html">Stack 한 쪽 끝에서만 자료를 넣고 뺄 수 있는 자료 구조. 마지막으로 넣은 것이 가장 먼저 나오기 때문에 Last In First Out (LIFO) 라고 한다. “스택”에서 데이터가 들어가고 나가는 곳을 “한 지점”에 고정을 시켜놓고, 명령어를 수행한다.</summary></entry><entry><title type="html">/etc/hosts 설정</title><link href="/Linux-hosts" rel="alternate" type="text/html" title="/etc/hosts 설정" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Linux-hosts</id><content type="html" xml:base="/Linux-hosts">&lt;h1 id=&quot;호스트-파일-설정&quot;&gt;호스트 파일 설정&lt;/h1&gt;
+&lt;h2 id=&quot;hosts-파일-소개&quot;&gt;hosts 파일 소개&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;/etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다.&lt;/li&gt;
+  &lt;li&gt;리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다.&lt;/li&gt;
+  &lt;li&gt;“NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;호스트hosts-설정&quot;&gt;호스트(hosts) 설정&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;/etc/hosts 파일을 편집한다.&lt;/li&gt;
+  &lt;li&gt;각 서버들의 IP 주소 및 도메인명과 Alias 등의 정보를 넣어준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# hosts 설정 방법&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# vi /etc/hosts
+101.101.101.101 test1.도메인명.com test1 &lt;span class=&quot;c&quot;&gt;# IP주소 도메인명 Alias(도메인의 별칭) 순으로 입력&lt;/span&gt;
+101.101.101.102 test2.도메인명.com test2
+101.101.101.103 test3.도메인명.com test3
+101.101.101.104 test4.도메인명.com test4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 도메인명으로 PING TEST&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# ping test1.도메인명.com
+PING test1.도메인명.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 4&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;8&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.
+
+&lt;span class=&quot;c&quot;&gt;# ALIAS로 PING TEST&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# ping test1
+PING test1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 56&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;84&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;호스트명-변경&quot;&gt;호스트명 변경&lt;/h2&gt;
+&lt;h3 id=&quot;hostnamectl-명령어를-활용하는-방법&quot;&gt;hostnamectl 명령어를 활용하는 방법&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Network hostname을 test.domainName.com으로 설정&lt;/li&gt;
+  &lt;li&gt;Home 디렉토리에서 작업을 수행한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;hostnamectl set-hostname test.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 변경 된 호스트명을 확인할 수 있다.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# hostname&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 출력 결과&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# test1.도메인명.com&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;shell-script를-활용하여-호스트-이름을-변경하는-방법&quot;&gt;Shell script를 활용하여, 호스트 이름을 변경하는 방법&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;bash 파일을 활용하여, 전체 서버에 명령어를 전달하려고 한다. change_hosts_name.sh 이름의 bash 파일을 생성해보자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# bash 파일을 실행하여, 리눅스 터널링을 수행할 것이다.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# vi change_hosts_name.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;host 안에는 hostname 목록들이 존재하며, 아래의 내용을 change_hosts_name.sh 파일에 넣어줌으로써, bash 파일을 수정해준다.&lt;/li&gt;
+  &lt;li&gt;내용 수정이 끝난 후에는 vi 명령어를 통해 쓰기 후 저장을 한다.(ESC키 → :wq 입력 후 엔터키로 빠져나온다.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;host &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hosts&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;portNumber&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'@'&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;hostnamectl set-hostname &lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;bash 파일을 실행해준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# sh ./change_hosts_name.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Akas</name></author><category term="Linux" /><summary type="html">호스트 파일 설정 hosts 파일 소개 /etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다. 리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다. “NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.</summary></entry><entry><title type="html">JVM 정리</title><link href="/JVM" rel="alternate" type="text/html" title="JVM 정리" /><published>2019-08-21T10:18:00+00:00</published><updated>2019-08-21T10:18:00+00:00</updated><id>/JVM</id><content type="html" xml:base="/JVM">&lt;p&gt;개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.&lt;/p&gt;
 
 &lt;p&gt;##JVM이란&lt;/p&gt;
 &lt;ul&gt;
@@ -143,19 +289,4 @@ Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 
 &lt;h2 id=&quot;break&quot;&gt;Break&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;반복문과 조건문을 탈출한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Ghost</name></author><category term="Algorithm" /><summary type="html">C 또는 Java에서 반복문을 탈출하거나, 생략하는 기능이 존재한다. Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 반복문 안에 존재하는 프로그램 내용을 건너 뛰고, 다음 루프로 넘어가는 기능을 한다.</summary></entry><entry><title type="html">CentOS 환경에서 포트없이 사용하기.</title><link href="/Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" rel="alternate" type="text/html" title="CentOS 환경에서 포트없이 사용하기." /><published>2019-07-24T15:00:00+00:00</published><updated>2019-07-24T15:00:00+00:00</updated><id>/Linux%20Port%EC%97%86%EC%9D%B4%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="/Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">&lt;p&gt;Port 번호를 생략하여, Linux 명령어를 사용하는 방법을 다룰 것이다.&lt;/p&gt;</content><author><name>Ghost</name></author><category term="Linux" /><summary type="html">Port 번호를 생략하여, Linux 명령어를 사용하는 방법을 다룰 것이다.</summary></entry><entry><title type="html">Jekyll Blog 개설</title><link href="/Blog-%EA%B0%9C%EC%84%A4" rel="alternate" type="text/html" title="Jekyll Blog 개설" /><published>2019-07-22T05:00:00+00:00</published><updated>2019-07-22T05:00:00+00:00</updated><id>/Blog%20%EA%B0%9C%EC%84%A4</id><content type="html" xml:base="/Blog-%EA%B0%9C%EC%84%A4">&lt;p&gt;블로그를 개설하였다.&lt;/p&gt;</content><author><name>Ghost</name></author><category term="Linux" /><summary type="html">블로그를 개설하였다.</summary></entry><entry><title type="html">Welcome to Ghost</title><link href="/welcome" rel="alternate" type="text/html" title="Welcome to Ghost" /><published>2017-07-27T10:00:00+00:00</published><updated>2017-07-27T10:00:00+00:00</updated><id>/welcome</id><content type="html" xml:base="/welcome">&lt;p&gt;Hey! Welcome to Ghost, it’s great to have you :)&lt;/p&gt;
-
-&lt;p&gt;We know that first impressions are important, so we’ve populated your new site with some initial &lt;strong&gt;Getting Started&lt;/strong&gt; posts that will help you get familiar with everything in no time. This is the first one!&lt;/p&gt;
-
-&lt;h3 id=&quot;there-are-a-few-things-that-you-should-know-up-front&quot;&gt;There are a few things that you should know up-front:&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;Ghost is designed for ambitious, professional publishers who want to actively build a business around their content. That’s who it works best for. If you’re using Ghost for some other purpose, that’s fine too - but it might not be the best choice for you.&lt;/li&gt;
-  &lt;li&gt;The entire platform can be modified and customized to suit your needs, which is very powerful, but doing so &lt;strong&gt;does&lt;/strong&gt; require some knowledge of code. Ghost is not necessarily a good platform for beginners or people who just want a simple personal blog.&lt;/li&gt;
-  &lt;li&gt;For the best experience we recommend downloading the Ghost Desktop App for your computer, which is the best way to access your Ghost site on a desktop device.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Ghost is made by an independent non-profit organisation called the Ghost Foundation. We are 100% self funded by revenue from our &lt;a href=&quot;https://ghost.org/pricing&quot;&gt;Ghost(Pro)&lt;/a&gt; service, and every penny we make is re-invested into funding further development of free, open source technology for modern journalism.&lt;/p&gt;
-
-&lt;p&gt;The main thing you’ll want to read about next is probably: &lt;a href=&quot;https://demo.ghost.io/the-editor/&quot;&gt;the Ghost editor&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once you’re done reading, you can simply delete the default &lt;strong&gt;Ghost&lt;/strong&gt; user from your team to remove all of these introductory posts!&lt;/p&gt;</content><author><name>Ghost</name></author><category term="Getting started" /><summary type="html">Hey! Welcome to Ghost, it’s great to have you :)</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Ghost</name></author><category term="Algorithm" /><summary type="html">C 또는 Java에서 반복문을 탈출하거나, 생략하는 기능이 존재한다. Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 반복문 안에 존재하는 프로그램 내용을 건너 뛰고, 다음 루프로 넘어가는 기능을 한다.</summary></entry><entry><title type="html">CentOS 환경에서 포트없이 사용하기.</title><link href="/Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" rel="alternate" type="text/html" title="CentOS 환경에서 포트없이 사용하기." /><published>2019-07-24T15:00:00+00:00</published><updated>2019-07-24T15:00:00+00:00</updated><id>/Linux%20Port%EC%97%86%EC%9D%B4%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="/Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">&lt;p&gt;Port 번호를 생략하여, Linux 명령어를 사용하는 방법을 다룰 것이다.&lt;/p&gt;</content><author><name>Ghost</name></author><category term="Linux" /><summary type="html">Port 번호를 생략하여, Linux 명령어를 사용하는 방법을 다룰 것이다.</summary></entry></feed>
