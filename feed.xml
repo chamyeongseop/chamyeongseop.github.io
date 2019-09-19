@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-17T00:24:16+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">JAVA의 length, length(), size 비교</title><link href="/Size_Length" rel="alternate" type="text/html" title="JAVA의 length, length(), size 비교" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Size_Length</id><content type="html" xml:base="/Size_Length">&lt;h1 id=&quot;java의-length-length-size-사용-및-비교&quot;&gt;JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-19T00:01:07+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">JAVA의 다형성(Polymorphism)과 동적바인딩</title><link href="/Polymorphism_Dynamic_Binding" rel="alternate" type="text/html" title="JAVA의 다형성(Polymorphism)과 동적바인딩" /><published>2019-09-17T09:00:00+00:00</published><updated>2019-09-17T09:00:00+00:00</updated><id>/Polymorphism_Dynamic_Binding</id><content type="html" xml:base="/Polymorphism_Dynamic_Binding">&lt;h1 id=&quot;다형성&quot;&gt;다형성&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;“객체지향”에는 4가지 중요한 개념이 있다. 추상화, 캡슐화, 상송 그리고 다형성이다.&lt;/li&gt;
+  &lt;li&gt;아래의 코드를 통해, 다형성 및 동적 바인딩의 개념을 살펴보자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Polymorphism&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;student&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;student&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Person&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Student&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Student&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;참조 변수 student는 Person 객체를 참조하고 있다. 따라서, Person 내의 show() 메소드가 호출이 되어야하지만, 동적바인딩을 통해 런타임 시점에 객체 타입을 기준으로 실행될 함수를 호출한다.
+즉 실행되는 시점에서는  Student 객체가 생성되어, 해당 객체의 show() 함수를 호출한다.&lt;/p&gt;
+
+&lt;p&gt;정리하자면, 다형성이 적용될 때, 참조 변수 student는 컴파일 시점과 런타임 시점에서 참조하는 함수가 다른 것이다.&lt;/p&gt;
+
+&lt;p&gt;게시글 참조 : https://brunch.co.kr/@mystoryg/60&lt;/p&gt;</content><author><name>Akas</name></author><category term="Java" /><summary type="html">다형성 “객체지향”에는 4가지 중요한 개념이 있다. 추상화, 캡슐화, 상송 그리고 다형성이다. 아래의 코드를 통해, 다형성 및 동적 바인딩의 개념을 살펴보자.</summary></entry><entry><title type="html">JAVA의 length, length(), size 비교</title><link href="/Size_Length" rel="alternate" type="text/html" title="JAVA의 length, length(), size 비교" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Size_Length</id><content type="html" xml:base="/Size_Length">&lt;h1 id=&quot;java의-length-length-size-사용-및-비교&quot;&gt;JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교&lt;/h1&gt;
 
 &lt;h2 id=&quot;length&quot;&gt;length&lt;/h2&gt;
 &lt;ul&gt;
@@ -289,4 +317,4 @@ Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 
 &lt;h2 id=&quot;break&quot;&gt;Break&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;반복문과 조건문을 탈출한다.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Ghost</name></author><category term="Algorithm" /><summary type="html">C 또는 Java에서 반복문을 탈출하거나, 생략하는 기능이 존재한다. Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 반복문 안에 존재하는 프로그램 내용을 건너 뛰고, 다음 루프로 넘어가는 기능을 한다.</summary></entry><entry><title type="html">CentOS 환경에서 포트없이 사용하기.</title><link href="/Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" rel="alternate" type="text/html" title="CentOS 환경에서 포트없이 사용하기." /><published>2019-07-24T15:00:00+00:00</published><updated>2019-07-24T15:00:00+00:00</updated><id>/Linux%20Port%EC%97%86%EC%9D%B4%20%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0</id><content type="html" xml:base="/Linux-Port%EC%97%86%EC%9D%B4-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">&lt;p&gt;Port 번호를 생략하여, Linux 명령어를 사용하는 방법을 다룰 것이다.&lt;/p&gt;</content><author><name>Ghost</name></author><category term="Linux" /><summary type="html">Port 번호를 생략하여, Linux 명령어를 사용하는 방법을 다룰 것이다.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Ghost</name></author><category term="Algorithm" /><summary type="html">C 또는 Java에서 반복문을 탈출하거나, 생략하는 기능이 존재한다. Break는 반복문을 탈출하며, Continue는 반복문을 생략한 후, 즉 반복문 안에 존재하는 프로그램 내용을 건너 뛰고, 다음 루프로 넘어가는 기능을 한다.</summary></entry></feed>

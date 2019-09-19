@@ -8,6 +8,25 @@
     
       
       <item>
+        <title>JAVA의 다형성(Polymorphism)과 동적바인딩</title>
+        
+          <description>&lt;h1 id=&quot;다형성&quot;&gt;다형성&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;“객체지향”에는 4가지 중요한 개념이 있다. 추상화, 캡슐화, 상송 그리고 다형성이다.&lt;/li&gt;
+  &lt;li&gt;아래의 코드를 통해, 다형성 및 동적 바인딩의 개념을 살펴보자.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Tue, 17 Sep 2019 09:00:00 +0000</pubDate>
+        <link>
+        /Polymorphism_Dynamic_Binding</link>
+        <guid isPermaLink="true">/Polymorphism_Dynamic_Binding</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>JAVA의 length, length(), size 비교</title>
         
           <description>&lt;h1 id=&quot;java의-length-length-size-사용-및-비교&quot;&gt;JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교&lt;/h1&gt;
