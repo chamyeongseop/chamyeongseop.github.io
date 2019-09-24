@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
+  <link href="/tag/ci/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2019-09-24T07:46:02+00:00</updated>
+  <id>/tag/ci/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Akas Blog | </title>
+  
+
+  
+    <subtitle>The machine learning enginner</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Git Workflow</title>
+      <link href="/git" rel="alternate" type="text/html" title="Git Workflow" />
+      <published>2019-09-19T09:00:00+00:00</published>
+      <updated>2019-09-19T09:00:00+00:00</updated>
+      <id>/git</id>
+      <content type="html" xml:base="/git">&lt;h1 id=&quot;svn과-git-차이점-요약&quot;&gt;SVN과 Git 차이점 요약&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;저장소의 위치가 다르며, 로컬 저장소가 존재한다.(분산 처리, 안전성, 빠른 속도)&lt;/li&gt;
+  &lt;li&gt;커밋 이전에 스테이지 영역에 추가하는 과정이 존재(커밋 대상의 분리)&lt;/li&gt;
+  &lt;li&gt;각각의 버전을 스냅샷으로 저장&lt;/li&gt;
+  &lt;li&gt;스냅샷이 존재하기 때문에 브랜치도 자유롭게 생성 가능&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;git의-주요-명령어-정리&quot;&gt;Git의 주요 명령어 정리&lt;/h1&gt;
+
+&lt;h2 id=&quot;새로운-저장소-만들기&quot;&gt;새로운 저장소 만들기&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;폴더를 만들고 그 안에서 새로운 git 저장소(.git)를 생성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git init&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;변경내용-확정하기&quot;&gt;변경내용 확정하기&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;스테이징(Staging) 영역에 추가 된 변경 내용을 확정하기 위해, Commit 명령어를 이용&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;DESCRIPTION&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;변경-내용-발행하기&quot;&gt;변경 내용 발행하기&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;원격 저장소에 변경 내용을 올리는 방법&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;기존의 remote가 아닌, 원격 저장소의 주소를 바꿔서 발행하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git remote add origin &amp;lt;원격서버주소&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;저장소-받아오기&quot;&gt;저장소 받아오기&lt;/h1&gt;
+&lt;h2 id=&quot;로컬-저장소local-repository에-복제하기&quot;&gt;로컬 저장소(Local repository)에 복제하기&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone &lt;span class=&quot;s2&quot;&gt;&quot;/path&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;원격-서버의-저장소를-복제하기&quot;&gt;원격 서버의 저장소를 복제하기&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone 사용자명@호스트:/원격/저장소/경로&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;브랜치-관리하기&quot;&gt;브랜치 관리하기&lt;/h2&gt;
+
+&lt;h3 id=&quot;브랜치-만들기&quot;&gt;브랜치 만들기&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;develop이라는 이름의 브랜치를 생성한 후, 해당 디렉토리로 이동&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; develop&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다시 Master로 돌아오기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git checkout master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;갱신하고-병합하기&quot;&gt;갱신하고 병합하기&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;로컬 저장소를 원격 저장소에 맞추어서 업데이트 및 갱신하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git pull&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다른 브랜치의 변경 내용을 현재 브랜치에 병합하기 (현재 Branch 폴더 내에서 명령어를 수행)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git merge &amp;lt;Branch 이름&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;브랜치-삭제-및-원격-저장소-전송&quot;&gt;브랜치 삭제 및 원격 저장소 전송&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;develop 브랜치를 삭제하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; develop&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;원격 저장소로 브랜치 전송하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git push origin develop&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;변경-내용-되돌리기&quot;&gt;변경 내용 되돌리기.&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;한 단계 전 상태로 돌아가기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git reset HEAD~1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;해당 커밋을 되돌리는 커밋을 새로 생성하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git revert&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;해당 정리는 Aria(In Suk) Kim님의 Git-Workflow를 참고하여, 작성한 포스트입니다.
+참조 url : https://www.slideshare.net/shoo7830/gitworkflow-170728162&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Akas</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="CI" />
+      
+
+      
+        <summary type="html">SVN과 Git 차이점 요약 저장소의 위치가 다르며, 로컬 저장소가 존재한다.(분산 처리, 안전성, 빠른 속도) 커밋 이전에 스테이지 영역에 추가하는 과정이 존재(커밋 대상의 분리) 각각의 버전을 스냅샷으로 저장 스냅샷이 존재하기 때문에 브랜치도 자유롭게 생성 가능</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
