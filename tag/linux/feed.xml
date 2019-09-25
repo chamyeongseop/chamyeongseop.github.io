@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/tag/linux/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-09-24T08:00:00+00:00</updated>
+  <updated>2019-09-25T06:30:51+00:00</updated>
   <id>/tag/linux/feed.xml</id>
 
   
@@ -32,6 +32,93 @@
   
   
 
+  
+    <entry>
+      <title type="html">Parallel SSH</title>
+      <link href="/PSSH" rel="alternate" type="text/html" title="Parallel SSH" />
+      <published>2019-09-24T09:00:00+00:00</published>
+      <updated>2019-09-24T09:00:00+00:00</updated>
+      <id>/PSSH</id>
+      <content type="html" xml:base="/PSSH">&lt;p&gt;다수의 타깃서버에 동일한 명령, 파일복제 등을 수행할때 PSSH, PSCP 등을 활용할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;명령어-설명&quot;&gt;명령어 설명&lt;/h2&gt;
+&lt;p&gt;PSSH(Parallel-SSH) : 여러 대의 서버에 동일한 명령어를 반복 적용할 수 있는 명령어
+PSCP(Parallel-SCP) : 여러 대의 서버에 동일한 파일을 반복하여 복사할 수 있는 명령어
+Usage: pssh/pscp (options) command
+Options
+-i : 결과 출력
+-h : 호스트 파일 불러오기
+-H : 목적지 주소 기재(ip, hostname, domain 입력), 2개 이상의 서버에 명령할 경우 띄어주기로 구분&lt;/p&gt;
+
+&lt;h2 id=&quot;pssh-예제&quot;&gt;PSSH 예제&lt;/h2&gt;
+&lt;p&gt;3.1 PSSH를 활용하여, 여러 서버의 비밀번호 변경하기
+타깃 서버 리스트 작성 (-h 옵션 사용시)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;동시에 명령을 수행 할 서버의 정보를 등록해준다(4가지 방식 가능)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# ip:port 형식&lt;/span&gt;
+0.0.0.1:1111
+0.0.0.2:1111
+
+&lt;span class=&quot;c&quot;&gt;# hostname:port 형식&lt;/span&gt;
+hostname1:1111
+hostname2:1111
+
+&lt;span class=&quot;c&quot;&gt;# IP (사용자가 직접 SSH 서비스의 포트를 설정하면, 포트명을 생략하여 사용할 수 있다.)&lt;/span&gt;
+0.0.0.1
+0.0.0.2
+
+&lt;span class=&quot;c&quot;&gt;# HostName&lt;/span&gt;
+hostname1
+hostname2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hosts에 등록 된 여러 서버의 비밀번호를 한번에 변경할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;호스트-리스트에-작성된-타깃서버들에-동일하게-password-변경-적용&quot;&gt;호스트 리스트에 작성된 타깃서버들에 동일하게 PASSWORD 변경 적용&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pssh &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list &lt;span class=&quot;s2&quot;&gt;&quot;echo 'PASSWORD' | sudo passwd --stdin hdfs&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;32-pscp로-파일-배포하기&quot;&gt;3.2 PSCP로 파일 배포하기&lt;/h2&gt;
+&lt;p&gt;PSCP예시 : pscp [OPTIONS] 로컬파일의위치 복제할위치
+PSCP 명령어는 PSSH 명령어와는 달리, “sudo” 명령어 사용에 제약(권한 제한)이 있어 /etc/hosts로 바로 이동을 시킬 수 없어 (pscp로 복제가능한 경로인) /home/hdfs에 우선 복사한 후, 옮기는 방식을 사용한다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 호스트 리스트에 작성된 타깃서버들에 파일복제 수행&lt;/span&gt;
+pscp &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list /etc/hosts /home/hdfs
+
+
+/etc/hosts에 옮겨준다.
+
+pssh &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mv /home/hdfs/hosts /etc/hosts&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Akas</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Linux" />
+      
+
+      
+        <summary type="html">다수의 타깃서버에 동일한 명령, 파일복제 등을 수행할때 PSSH, PSCP 등을 활용할 수 있다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">/etc/hosts 설정</title>

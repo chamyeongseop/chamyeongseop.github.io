@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/author/akas/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-09-24T08:00:00+00:00</updated>
+  <updated>2019-09-25T06:30:51+00:00</updated>
   <id>/author/akas/feed.xml</id>
 
   
@@ -32,6 +32,93 @@
   
   
 
+  
+    <entry>
+      <title type="html">Parallel SSH</title>
+      <link href="/PSSH" rel="alternate" type="text/html" title="Parallel SSH" />
+      <published>2019-09-24T09:00:00+00:00</published>
+      <updated>2019-09-24T09:00:00+00:00</updated>
+      <id>/PSSH</id>
+      <content type="html" xml:base="/PSSH">&lt;p&gt;다수의 타깃서버에 동일한 명령, 파일복제 등을 수행할때 PSSH, PSCP 등을 활용할 수 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;명령어-설명&quot;&gt;명령어 설명&lt;/h2&gt;
+&lt;p&gt;PSSH(Parallel-SSH) : 여러 대의 서버에 동일한 명령어를 반복 적용할 수 있는 명령어
+PSCP(Parallel-SCP) : 여러 대의 서버에 동일한 파일을 반복하여 복사할 수 있는 명령어
+Usage: pssh/pscp (options) command
+Options
+-i : 결과 출력
+-h : 호스트 파일 불러오기
+-H : 목적지 주소 기재(ip, hostname, domain 입력), 2개 이상의 서버에 명령할 경우 띄어주기로 구분&lt;/p&gt;
+
+&lt;h2 id=&quot;pssh-예제&quot;&gt;PSSH 예제&lt;/h2&gt;
+&lt;p&gt;3.1 PSSH를 활용하여, 여러 서버의 비밀번호 변경하기
+타깃 서버 리스트 작성 (-h 옵션 사용시)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;동시에 명령을 수행 할 서버의 정보를 등록해준다(4가지 방식 가능)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# ip:port 형식&lt;/span&gt;
+0.0.0.1:1111
+0.0.0.2:1111
+
+&lt;span class=&quot;c&quot;&gt;# hostname:port 형식&lt;/span&gt;
+hostname1:1111
+hostname2:1111
+
+&lt;span class=&quot;c&quot;&gt;# IP (사용자가 직접 SSH 서비스의 포트를 설정하면, 포트명을 생략하여 사용할 수 있다.)&lt;/span&gt;
+0.0.0.1
+0.0.0.2
+
+&lt;span class=&quot;c&quot;&gt;# HostName&lt;/span&gt;
+hostname1
+hostname2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;hosts에 등록 된 여러 서버의 비밀번호를 한번에 변경할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;호스트-리스트에-작성된-타깃서버들에-동일하게-password-변경-적용&quot;&gt;호스트 리스트에 작성된 타깃서버들에 동일하게 PASSWORD 변경 적용&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pssh &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list &lt;span class=&quot;s2&quot;&gt;&quot;echo 'PASSWORD' | sudo passwd --stdin hdfs&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;32-pscp로-파일-배포하기&quot;&gt;3.2 PSCP로 파일 배포하기&lt;/h2&gt;
+&lt;p&gt;PSCP예시 : pscp [OPTIONS] 로컬파일의위치 복제할위치
+PSCP 명령어는 PSSH 명령어와는 달리, “sudo” 명령어 사용에 제약(권한 제한)이 있어 /etc/hosts로 바로 이동을 시킬 수 없어 (pscp로 복제가능한 경로인) /home/hdfs에 우선 복사한 후, 옮기는 방식을 사용한다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 호스트 리스트에 작성된 타깃서버들에 파일복제 수행&lt;/span&gt;
+pscp &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list /etc/hosts /home/hdfs
+
+
+/etc/hosts에 옮겨준다.
+
+pssh &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mv /home/hdfs/hosts /etc/hosts&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Akas</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Linux" />
+      
+
+      
+        <summary type="html">다수의 타깃서버에 동일한 명령, 파일복제 등을 수행할때 PSSH, PSCP 등을 활용할 수 있다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Git Workflow</title>
@@ -452,7 +539,12 @@ PING test1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span
 &lt;ul&gt;
   &lt;li&gt;Collection Object (ArrayList, Set etc) : 컬렉션 타입의 길이를 확인할때 사용된다.&lt;/li&gt;
   &lt;li&gt;메소드이므로, Collection에 사용될 수 있다.&lt;/li&gt;
-&lt;/ul&gt;</content>
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;지역변수-및-전역변수-신중하게-사용하기&quot;&gt;지역변수 및 전역변수 신중하게 사용하기.&lt;/h1&gt;
+&lt;h2 id=&quot;지역-변수&quot;&gt;지역 변수&lt;/h2&gt;
+
+&lt;h2 id=&quot;전역-변수&quot;&gt;전역 변수&lt;/h2&gt;</content>
 
       
       
@@ -474,6 +566,69 @@ PING test1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span
 
       
         <summary type="html">JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">JAVA의 length, length(), size 비교</title>
+      <link href="/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98" rel="alternate" type="text/html" title="JAVA의 length, length(), size 비교" />
+      <published>2019-09-11T09:00:00+00:00</published>
+      <updated>2019-09-11T09:00:00+00:00</updated>
+      <id>/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98</id>
+      <content type="html" xml:base="/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98">&lt;h1 id=&quot;지역변수-및-전역변수-신중하게-사용하기&quot;&gt;지역변수 및 전역변수 신중하게 사용하기.&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;지역 변수와 전역 변수를 구분하는 기준은, 변수를 블록 내(if, for 구문)에서만 사용가능하느냐 아니면 전체에서 사용 가능하느냐의 차이.&lt;/li&gt;
+  &lt;li&gt;전역 변수는 블록 내에서 모두 사용가능하지만, 지역 변수로 활용이 되고 있는 부분이 블록 밖에서는 Compile 오류가 발생한다.&lt;/li&gt;
+  &lt;li&gt;전역 변수는 함수 밖에서 선언하며, 어디에서든지 접근 가능한 변수.&lt;/li&gt;
+  &lt;li&gt;지역 변수는 함수 내에서 선언하며 블록 내에서만 접근 가능한 변수.&lt;/li&gt;
+  &lt;li&gt;단 지역변수는 선언한 위치에 따라 접근할 수 있는 (사용할 수 있는) 범위가 달라지기도 한다.&lt;/li&gt;
+  &lt;li&gt;일반적인 프로그래밍에서는 곡 필요하지 않다면, 전역 변수는 잘 사용하지 않는다.&lt;/li&gt;
+  &lt;li&gt;지역 변수는 함수가 끝나거나 블록을 벗어나면 메모리에서 소멸되는데, 전역 변수는 계속 살아남아있어, 메모리 낭비를 초래할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;problem_solving에서-컴파일-오류가-발생했던-부분&quot;&gt;Problem_Solving에서 컴파일 오류가 발생했던 부분&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; - &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;결론: 전역 변수와 지역 변수를 구분하려고 하였으나, 변수 a를 이미 전역 변수로 선언을 하였는데, 지역 변수를 한번 더 선언을 하여 오류 발생.&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Akas</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="JAVA" />
+      
+
+      
+        <summary type="html">지역변수 및 전역변수 신중하게 사용하기. 지역 변수와 전역 변수를 구분하는 기준은, 변수를 블록 내(if, for 구문)에서만 사용가능하느냐 아니면 전체에서 사용 가능하느냐의 차이. 전역 변수는 블록 내에서 모두 사용가능하지만, 지역 변수로 활용이 되고 있는 부분이 블록 밖에서는 Compile 오류가 발생한다. 전역 변수는 함수 밖에서 선언하며, 어디에서든지 접근 가능한 변수. 지역 변수는 함수 내에서 선언하며 블록 내에서만 접근 가능한 변수. 단 지역변수는 선언한 위치에 따라 접근할 수 있는 (사용할 수 있는) 범위가 달라지기도 한다. 일반적인 프로그래밍에서는 곡 필요하지 않다면, 전역 변수는 잘 사용하지 않는다. 지역 변수는 함수가 끝나거나 블록을 벗어나면 메모리에서 소멸되는데, 전역 변수는 계속 살아남아있어, 메모리 낭비를 초래할 수 있다.</summary>
       
 
       

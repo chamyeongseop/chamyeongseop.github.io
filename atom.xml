@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Parallel SSH</title>
+        
+          <description>&lt;p&gt;다수의 타깃서버에 동일한 명령, 파일복제 등을 수행할때 PSSH, PSCP 등을 활용할 수 있다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 24 Sep 2019 09:00:00 +0000</pubDate>
+        <link>
+        /PSSH</link>
+        <guid isPermaLink="true">/PSSH</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Git Workflow</title>
         
           <description>&lt;h1 id=&quot;svn과-git-차이점-요약&quot;&gt;SVN과 Git 차이점 요약&lt;/h1&gt;
@@ -43,6 +58,30 @@
         <link>
         /Polymorphism_Dynamic_Binding</link>
         <guid isPermaLink="true">/Polymorphism_Dynamic_Binding</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>JAVA의 length, length(), size 비교</title>
+        
+          <description>&lt;h1 id=&quot;지역변수-및-전역변수-신중하게-사용하기&quot;&gt;지역변수 및 전역변수 신중하게 사용하기.&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;지역 변수와 전역 변수를 구분하는 기준은, 변수를 블록 내(if, for 구문)에서만 사용가능하느냐 아니면 전체에서 사용 가능하느냐의 차이.&lt;/li&gt;
+  &lt;li&gt;전역 변수는 블록 내에서 모두 사용가능하지만, 지역 변수로 활용이 되고 있는 부분이 블록 밖에서는 Compile 오류가 발생한다.&lt;/li&gt;
+  &lt;li&gt;전역 변수는 함수 밖에서 선언하며, 어디에서든지 접근 가능한 변수.&lt;/li&gt;
+  &lt;li&gt;지역 변수는 함수 내에서 선언하며 블록 내에서만 접근 가능한 변수.&lt;/li&gt;
+  &lt;li&gt;단 지역변수는 선언한 위치에 따라 접근할 수 있는 (사용할 수 있는) 범위가 달라지기도 한다.&lt;/li&gt;
+  &lt;li&gt;일반적인 프로그래밍에서는 곡 필요하지 않다면, 전역 변수는 잘 사용하지 않는다.&lt;/li&gt;
+  &lt;li&gt;지역 변수는 함수가 끝나거나 블록을 벗어나면 메모리에서 소멸되는데, 전역 변수는 계속 살아남아있어, 메모리 낭비를 초래할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Wed, 11 Sep 2019 09:00:00 +0000</pubDate>
+        <link>
+        /%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98</link>
+        <guid isPermaLink="true">/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98</guid>
       </item>
       
     
