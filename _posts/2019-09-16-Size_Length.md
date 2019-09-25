@@ -26,3 +26,9 @@ published: true
 ## size()
 - Collection Object (ArrayList, Set etc) : 컬렉션 타입의 길이를 확인할때 사용된다.
 - 메소드이므로, Collection에 사용될 수 있다.
+
+
+# 지역변수 및 전역변수 신중하게 사용하기.
+## 지역 변수
+
+## 전역 변수
