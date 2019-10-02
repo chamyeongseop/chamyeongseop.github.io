@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/author/akas/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-09-25T06:30:51+00:00</updated>
+  <updated>2019-10-02T00:39:07+00:00</updated>
   <id>/author/akas/feed.xml</id>
 
   
@@ -542,9 +542,11 @@ PING test1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;지역변수-및-전역변수-신중하게-사용하기&quot;&gt;지역변수 및 전역변수 신중하게 사용하기.&lt;/h1&gt;
-&lt;h2 id=&quot;지역-변수&quot;&gt;지역 변수&lt;/h2&gt;
-
-&lt;h2 id=&quot;전역-변수&quot;&gt;전역 변수&lt;/h2&gt;</content>
+&lt;ul&gt;
+  &lt;li&gt;지역 변수와 전역 변수를 구분하는 기준은, 변수를 블록 내(if, for 구문)에서만 사용가능하느냐 아니면 전체에서 사용 가능하느냐의 차이.&lt;/li&gt;
+  &lt;li&gt;전역 변수는 블록 내에서 모두 사용가능하지만, 지역 변수로 활용이 되고 있는 부분이 블록 밖에서는 Compile 오류가 발생한다.&lt;/li&gt;
+  &lt;li&gt;전역 변수는 함수 밖에서 선언하며, 어디에서든지 접근 가능한 변수.&lt;/li&gt;
+&lt;/ul&gt;</content>
 
       
       

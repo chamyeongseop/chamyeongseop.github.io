@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-09-25T06:30:51+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">Parallel SSH</title><link href="/PSSH" rel="alternate" type="text/html" title="Parallel SSH" /><published>2019-09-24T09:00:00+00:00</published><updated>2019-09-24T09:00:00+00:00</updated><id>/PSSH</id><content type="html" xml:base="/PSSH">&lt;p&gt;다수의 타깃서버에 동일한 명령, 파일복제 등을 수행할때 PSSH, PSCP 등을 활용할 수 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-10-02T00:39:07+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">Parallel SSH</title><link href="/PSSH" rel="alternate" type="text/html" title="Parallel SSH" /><published>2019-09-24T09:00:00+00:00</published><updated>2019-09-24T09:00:00+00:00</updated><id>/PSSH</id><content type="html" xml:base="/PSSH">&lt;p&gt;다수의 타깃서버에 동일한 명령, 파일복제 등을 수행할때 PSSH, PSCP 등을 활용할 수 있다.&lt;/p&gt;
 
 &lt;h2 id=&quot;명령어-설명&quot;&gt;명령어 설명&lt;/h2&gt;
 &lt;p&gt;PSSH(Parallel-SSH) : 여러 대의 서버에 동일한 명령어를 반복 적용할 수 있는 명령어
@@ -232,9 +232,11 @@ pssh &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list &lt;span class=
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;지역변수-및-전역변수-신중하게-사용하기&quot;&gt;지역변수 및 전역변수 신중하게 사용하기.&lt;/h1&gt;
-&lt;h2 id=&quot;지역-변수&quot;&gt;지역 변수&lt;/h2&gt;
-
-&lt;h2 id=&quot;전역-변수&quot;&gt;전역 변수&lt;/h2&gt;</content><author><name>Akas</name></author><category term="JAVA" /><summary type="html">JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교</summary></entry><entry><title type="html">Stack 과 Queue 정리</title><link href="/Stack_Queue" rel="alternate" type="text/html" title="Stack 과 Queue 정리" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Stack_Queue</id><content type="html" xml:base="/Stack_Queue">&lt;h1 id=&quot;stack&quot;&gt;Stack&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;지역 변수와 전역 변수를 구분하는 기준은, 변수를 블록 내(if, for 구문)에서만 사용가능하느냐 아니면 전체에서 사용 가능하느냐의 차이.&lt;/li&gt;
+  &lt;li&gt;전역 변수는 블록 내에서 모두 사용가능하지만, 지역 변수로 활용이 되고 있는 부분이 블록 밖에서는 Compile 오류가 발생한다.&lt;/li&gt;
+  &lt;li&gt;전역 변수는 함수 밖에서 선언하며, 어디에서든지 접근 가능한 변수.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akas</name></author><category term="JAVA" /><summary type="html">JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교</summary></entry><entry><title type="html">Stack 과 Queue 정리</title><link href="/Stack_Queue" rel="alternate" type="text/html" title="Stack 과 Queue 정리" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Stack_Queue</id><content type="html" xml:base="/Stack_Queue">&lt;h1 id=&quot;stack&quot;&gt;Stack&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;한 쪽 끝에서만 자료를 넣고 뺄 수 있는 자료 구조.&lt;/li&gt;
   &lt;li&gt;마지막으로 넣은 것이 가장 먼저 나오기 때문에 Last In First Out (LIFO) 라고 한다.&lt;/li&gt;
