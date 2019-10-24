@@ -8,11 +8,30 @@
     
       
       <item>
+        <title>Git Branch 정리</title>
+        
+          <description>&lt;h1 id=&quot;branch&quot;&gt;Branch&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Git을 초기화 명령을 통해, master branch가 생성된다. 개발중에 새롭게 구현하거나 코드를 작성할 경우, 각각의 기능을 Feature라고 부른다.&lt;/li&gt;
+  &lt;li&gt;각각에 새로운 branch를 만들어서, 개별적으로 개발을 진행하고, master branch에 merge를 하여, 협업을 이루어 나간다.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 11 Oct 2019 09:00:00 +0000</pubDate>
+        <link>
+        /Git2</link>
+        <guid isPermaLink="true">/Git2</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>JAVA의 Iterator와 enumerate 정리</title>
         
           <description>&lt;h1 id=&quot;synchronous동기-vs-asynchronous비동기&quot;&gt;Synchronous(동기) VS Asynchronous(비동기)&lt;/h1&gt;
 &lt;ul&gt;
-  &lt;li&gt;동기(Synchronous)sms 어떤 작업이 실행되고, 그 작업이 완료될 때까지 다른 작업을 수행할 수가 없다. 이전의 작업이 완료되어야, 다음의 작업을 수행할 수 있다.&lt;/li&gt;
+  &lt;li&gt;동기(Synchronous)는 어떤 작업이 실행되고, 그 작업이 완료될 때까지 다른 작업을 수행할 수가 없다. 이전의 작업이 완료되어야, 다음의 작업을 수행할 수 있다.&lt;/li&gt;
   &lt;li&gt;하지만 비동기(Asynchronous)는 하나의 작업 수행이 완료되지 않아도, 기다리지 않고 다음 작업을 실행한다. 다만 이전부터 수행하고 있던 작업들이 끝나면, 신호를 알려준다.&lt;/li&gt;
 &lt;/ul&gt;
 

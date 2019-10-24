@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/tag/ci/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-10-11T00:14:44+00:00</updated>
+  <updated>2019-10-24T01:16:09+00:00</updated>
   <id>/tag/ci/feed.xml</id>
 
   
@@ -32,6 +32,85 @@
   
   
 
+  
+    <entry>
+      <title type="html">Git Branch 정리</title>
+      <link href="/Git2" rel="alternate" type="text/html" title="Git Branch 정리" />
+      <published>2019-10-11T09:00:00+00:00</published>
+      <updated>2019-10-11T09:00:00+00:00</updated>
+      <id>/Git2</id>
+      <content type="html" xml:base="/Git2">&lt;h1 id=&quot;branch&quot;&gt;Branch&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Git을 초기화 명령을 통해, master branch가 생성된다. 개발중에 새롭게 구현하거나 코드를 작성할 경우, 각각의 기능을 Feature라고 부른다.&lt;/li&gt;
+  &lt;li&gt;각각에 새로운 branch를 만들어서, 개별적으로 개발을 진행하고, master branch에 merge를 하여, 협업을 이루어 나간다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;branch-명령어-정리&quot;&gt;Branch 명령어 정리&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;전체 branch 목록 확인하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git branch &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;branch 생성&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git branch &amp;lt;branch_Name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;branch 이름 바꾸기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git branch &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &amp;lt;new_branch_Name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;branch 삭제하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;// d옵션은 안전하게 브랜치를 삭제 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;merge 명령어가 적용이 되지 않고 남은 변경 사항이 있다면 삭제하지 않는다.&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &amp;lt;branch&amp;gt;
+
+// D옵션은 merge 되지 않은 변경 사항이 있어도 삭제해버린다&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;force 기능&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+git branch &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;branch 이동하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git checkout master&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;새로운 branch를 checkout 명령어로 생성하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &amp;lt;new_branch_Name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Akas</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="CI" />
+      
+
+      
+        <summary type="html">Branch Git을 초기화 명령을 통해, master branch가 생성된다. 개발중에 새롭게 구현하거나 코드를 작성할 경우, 각각의 기능을 Feature라고 부른다. 각각에 새로운 branch를 만들어서, 개별적으로 개발을 진행하고, master branch에 merge를 하여, 협업을 이루어 나간다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Git Workflow</title>
