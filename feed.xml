@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-10-24T01:16:09+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">Git Branch 정리</title><link href="/Git2" rel="alternate" type="text/html" title="Git Branch 정리" /><published>2019-10-11T09:00:00+00:00</published><updated>2019-10-11T09:00:00+00:00</updated><id>/Git2</id><content type="html" xml:base="/Git2">&lt;h1 id=&quot;branch&quot;&gt;Branch&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-10-24T01:42:56+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">Git Branch 정리</title><link href="/Git2" rel="alternate" type="text/html" title="Git Branch 정리" /><published>2019-10-11T09:00:00+00:00</published><updated>2019-10-11T09:00:00+00:00</updated><id>/Git2</id><content type="html" xml:base="/Git2">&lt;h1 id=&quot;branch&quot;&gt;Branch&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;Git을 초기화 명령을 통해, master branch가 생성된다. 개발중에 새롭게 구현하거나 코드를 작성할 경우, 각각의 기능을 Feature라고 부른다.&lt;/li&gt;
   &lt;li&gt;각각에 새로운 branch를 만들어서, 개별적으로 개발을 진행하고, master branch에 merge를 하여, 협업을 이루어 나간다.&lt;/li&gt;
@@ -300,7 +300,74 @@ pssh &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list &lt;span class=
 
 &lt;p&gt;정리하자면, 다형성이 적용될 때, 참조 변수 student는 컴파일 시점과 런타임 시점에서 참조하는 함수가 다른 것이다.&lt;/p&gt;
 
-&lt;p&gt;게시글 참조 : https://brunch.co.kr/@mystoryg/60&lt;/p&gt;</content><author><name>Akas</name></author><category term="Java" /><summary type="html">다형성 “객체지향”에는 4가지 중요한 개념이 있다. 추상화, 캡슐화, 상송 그리고 다형성이다. 아래의 코드를 통해, 다형성 및 동적 바인딩의 개념을 살펴보자.</summary></entry><entry><title type="html">JAVA의 length, length(), size 비교</title><link href="/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98" rel="alternate" type="text/html" title="JAVA의 length, length(), size 비교" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98</id><content type="html" xml:base="/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98">&lt;h1 id=&quot;지역변수-및-전역변수-신중하게-사용하기&quot;&gt;지역변수 및 전역변수 신중하게 사용하기.&lt;/h1&gt;
+&lt;p&gt;게시글 참조 : https://brunch.co.kr/@mystoryg/60&lt;/p&gt;</content><author><name>Akas</name></author><category term="Java" /><summary type="html">다형성 “객체지향”에는 4가지 중요한 개념이 있다. 추상화, 캡슐화, 상송 그리고 다형성이다. 아래의 코드를 통해, 다형성 및 동적 바인딩의 개념을 살펴보자.</summary></entry><entry><title type="html">/etc/hosts 설정</title><link href="/Linux-hosts" rel="alternate" type="text/html" title="/etc/hosts 설정" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Linux-hosts</id><content type="html" xml:base="/Linux-hosts">&lt;h1 id=&quot;호스트-파일-설정&quot;&gt;호스트 파일 설정&lt;/h1&gt;
+&lt;h2 id=&quot;hosts-파일-소개&quot;&gt;hosts 파일 소개&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;/etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다.&lt;/li&gt;
+  &lt;li&gt;리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다.&lt;/li&gt;
+  &lt;li&gt;“NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;호스트hosts-설정&quot;&gt;호스트(hosts) 설정&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;/etc/hosts 파일을 편집한다.&lt;/li&gt;
+  &lt;li&gt;각 서버들의 IP 주소 및 도메인명과 Alias 등의 정보를 넣어준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# hosts 설정 방법&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# vi /etc/hosts
+101.101.101.101 test1.도메인명.com test1 &lt;span class=&quot;c&quot;&gt;# IP주소 도메인명 Alias(도메인의 별칭) 순으로 입력&lt;/span&gt;
+101.101.101.102 test2.도메인명.com test2
+101.101.101.103 test3.도메인명.com test3
+101.101.101.104 test4.도메인명.com test4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 도메인명으로 PING TEST&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# ping test1.도메인명.com
+PING test1.도메인명.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 4&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;8&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.
+
+&lt;span class=&quot;c&quot;&gt;# ALIAS로 PING TEST&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# ping test1
+PING test1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 56&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;84&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;호스트명-변경&quot;&gt;호스트명 변경&lt;/h2&gt;
+&lt;h3 id=&quot;hostnamectl-명령어를-활용하는-방법&quot;&gt;hostnamectl 명령어를 활용하는 방법&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Network hostname을 test.domainName.com으로 설정&lt;/li&gt;
+  &lt;li&gt;Home 디렉토리에서 작업을 수행한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;hostnamectl set-hostname test.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 변경 된 호스트명을 확인할 수 있다.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# hostname&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 출력 결과&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# test1.도메인명.com&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;shell-script를-활용하여-호스트-이름을-변경하는-방법&quot;&gt;Shell script를 활용하여, 호스트 이름을 변경하는 방법&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;bash 파일을 활용하여, 전체 서버에 명령어를 전달하려고 한다. change_hosts_name.sh 이름의 bash 파일을 생성해보자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# bash 파일을 실행하여, 리눅스 터널링을 수행할 것이다.&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# vi change_hosts_name.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;host 안에는 hostname 목록들이 존재하며, 아래의 내용을 change_hosts_name.sh 파일에 넣어줌으로써, bash 파일을 수정해준다.&lt;/li&gt;
+  &lt;li&gt;내용 수정이 끝난 후에는 vi 명령어를 통해 쓰기 후 저장을 한다.(ESC키 → :wq 입력 후 엔터키로 빠져나온다.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;host &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hosts&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;portNumber&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'@'&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;hostnamectl set-hostname &lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;bash 파일을 실행해준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# sh ./change_hosts_name.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Akas</name></author><category term="Linux" /><summary type="html">호스트 파일 설정 hosts 파일 소개 /etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다. 리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다. “NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.</summary></entry><entry><title type="html">JAVA의 length, length(), size 비교</title><link href="/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98" rel="alternate" type="text/html" title="JAVA의 length, length(), size 비교" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98</id><content type="html" xml:base="/%EC%A0%84%EC%97%AD%EB%B3%80%EC%88%98Versus%EC%A7%80%EC%97%AD%EB%B3%80%EC%88%98">&lt;h1 id=&quot;지역변수-및-전역변수-신중하게-사용하기&quot;&gt;지역변수 및 전역변수 신중하게 사용하기.&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;지역 변수와 전역 변수를 구분하는 기준은, 변수를 블록 내(if, for 구문)에서만 사용가능하느냐 아니면 전체에서 사용 가능하느냐의 차이.&lt;/li&gt;
   &lt;li&gt;전역 변수는 블록 내에서 모두 사용가능하지만, 지역 변수로 활용이 되고 있는 부분이 블록 밖에서는 Compile 오류가 발생한다.&lt;/li&gt;
@@ -415,74 +482,7 @@ pssh &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list &lt;span class=
   &lt;li&gt;back : 큐의 가장 뒤에 있는 자료를 보는 연산&lt;/li&gt;
   &lt;li&gt;empty : 큐가 비어있는지 아닌지를 알아보는 연산&lt;/li&gt;
   &lt;li&gt;size : 큐에 저장되어 있는 자료의 개수를 알아보는 연산&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akas</name></author><category term="DS" /><summary type="html">Stack 한 쪽 끝에서만 자료를 넣고 뺄 수 있는 자료 구조. 마지막으로 넣은 것이 가장 먼저 나오기 때문에 Last In First Out (LIFO) 라고 한다. “스택”에서 데이터가 들어가고 나가는 곳을 “한 지점”에 고정을 시켜놓고, 명령어를 수행한다.</summary></entry><entry><title type="html">/etc/hosts 설정</title><link href="/Linux-hosts" rel="alternate" type="text/html" title="/etc/hosts 설정" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Linux-hosts</id><content type="html" xml:base="/Linux-hosts">&lt;h1 id=&quot;호스트-파일-설정&quot;&gt;호스트 파일 설정&lt;/h1&gt;
-&lt;h2 id=&quot;hosts-파일-소개&quot;&gt;hosts 파일 소개&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;/etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다.&lt;/li&gt;
-  &lt;li&gt;리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다.&lt;/li&gt;
-  &lt;li&gt;“NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;호스트hosts-설정&quot;&gt;호스트(hosts) 설정&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;/etc/hosts 파일을 편집한다.&lt;/li&gt;
-  &lt;li&gt;각 서버들의 IP 주소 및 도메인명과 Alias 등의 정보를 넣어준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# hosts 설정 방법&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# vi /etc/hosts
-101.101.101.101 test1.도메인명.com test1 &lt;span class=&quot;c&quot;&gt;# IP주소 도메인명 Alias(도메인의 별칭) 순으로 입력&lt;/span&gt;
-101.101.101.102 test2.도메인명.com test2
-101.101.101.103 test3.도메인명.com test3
-101.101.101.104 test4.도메인명.com test4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 도메인명으로 PING TEST&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# ping test1.도메인명.com
-PING test1.도메인명.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 4&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;8&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.
-
-&lt;span class=&quot;c&quot;&gt;# ALIAS로 PING TEST&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# ping test1
-PING test1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 56&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;84&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;호스트명-변경&quot;&gt;호스트명 변경&lt;/h2&gt;
-&lt;h3 id=&quot;hostnamectl-명령어를-활용하는-방법&quot;&gt;hostnamectl 명령어를 활용하는 방법&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Network hostname을 test.domainName.com으로 설정&lt;/li&gt;
-  &lt;li&gt;Home 디렉토리에서 작업을 수행한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;hostnamectl set-hostname test.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 변경 된 호스트명을 확인할 수 있다.&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# hostname&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 출력 결과&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# test1.도메인명.com&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;shell-script를-활용하여-호스트-이름을-변경하는-방법&quot;&gt;Shell script를 활용하여, 호스트 이름을 변경하는 방법&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;bash 파일을 활용하여, 전체 서버에 명령어를 전달하려고 한다. change_hosts_name.sh 이름의 bash 파일을 생성해보자.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# bash 파일을 실행하여, 리눅스 터널링을 수행할 것이다.&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# vi change_hosts_name.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;host 안에는 hostname 목록들이 존재하며, 아래의 내용을 change_hosts_name.sh 파일에 넣어줌으로써, bash 파일을 수정해준다.&lt;/li&gt;
-  &lt;li&gt;내용 수정이 끝난 후에는 vi 명령어를 통해 쓰기 후 저장을 한다.(ESC키 → :wq 입력 후 엔터키로 빠져나온다.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;host &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hosts&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;do
-    &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;portNumber&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'@'&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;hostnamectl set-hostname &lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;bash 파일을 실행해준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# sh ./change_hosts_name.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>Akas</name></author><category term="Linux" /><summary type="html">호스트 파일 설정 hosts 파일 소개 /etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다. 리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다. “NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.</summary></entry><entry><title type="html">JVM 정리</title><link href="/JVM" rel="alternate" type="text/html" title="JVM 정리" /><published>2019-08-21T10:18:00+00:00</published><updated>2019-08-21T10:18:00+00:00</updated><id>/JVM</id><content type="html" xml:base="/JVM">&lt;p&gt;개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Akas</name></author><category term="DS" /><summary type="html">Stack 한 쪽 끝에서만 자료를 넣고 뺄 수 있는 자료 구조. 마지막으로 넣은 것이 가장 먼저 나오기 때문에 Last In First Out (LIFO) 라고 한다. “스택”에서 데이터가 들어가고 나가는 곳을 “한 지점”에 고정을 시켜놓고, 명령어를 수행한다.</summary></entry><entry><title type="html">JVM 정리</title><link href="/JVM" rel="alternate" type="text/html" title="JVM 정리" /><published>2019-08-21T10:18:00+00:00</published><updated>2019-08-21T10:18:00+00:00</updated><id>/JVM</id><content type="html" xml:base="/JVM">&lt;p&gt;개발을 하는 과정에서 자바를 써왔었지만, 자바가 실행되는 원리와 구조에 대해서는 기초 지식이 부족하여, 이를 아래와 같이 정리하려 한다.&lt;/p&gt;
 
 &lt;p&gt;##JVM이란&lt;/p&gt;
 &lt;ul&gt;
