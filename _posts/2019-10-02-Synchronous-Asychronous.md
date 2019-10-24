@@ -14,7 +14,7 @@ published: true
 ---
 
 # Synchronous(동기) VS Asynchronous(비동기)
-- 동기(Synchronous)sms 어떤 작업이 실행되고, 그 작업이 완료될 때까지 다른 작업을 수행할 수가 없다. 이전의 작업이 완료되어야, 다음의 작업을 수행할 수 있다.
+- 동기(Synchronous)는 어떤 작업이 실행되고, 그 작업이 완료될 때까지 다른 작업을 수행할 수가 없다. 이전의 작업이 완료되어야, 다음의 작업을 수행할 수 있다.
 - 하지만 비동기(Asynchronous)는 하나의 작업 수행이 완료되지 않아도, 기다리지 않고 다음 작업을 실행한다. 다만 이전부터 수행하고 있던 작업들이 끝나면, 신호를 알려준다.
 
 
@@ -39,8 +39,6 @@ published: true
 ### remove()
 - 현재 조회하는 객체의 레퍼런스를 삭제한다.
 
-
-
 # Enumeration
 - Enumeration은 Iterator에서 remove() 메소드만 빠지고, 이름만 다를 뿐 사용법은 같다. (Iterator의 구버전)
 
@@ -55,3 +53,12 @@ published: true
 - ListIterator는 Iterator를 상속받아서 기능을 추가한 것이다.
 - 컬렉션의 요소에 접근할 때, Iterator는 단방향으로만 이동할 수 있지만, ListIterator는 양방향으로 이동이 가능하다는 장점이 있다.
 - ArrayList나 LinkedList처럼 List 인터페이스를 구현한 컬렉션 클래스에서만 사용이 가능하다.
+
+
+### Fail-Fast 방식
+- Iterator를 이용해서 순차적으로 접근하고 있는 도중 다른 곳에서 해당 컬렉션에 데이터를 추가하거나 삭제하는 등의 작업이 일어난다면, ConcurrentModificationException이 발생하게 하는 방식
+(Java 1.2 부터 지원)
+
+- Enumeration은 컬렉션의 집합을 통째로 복사해서(Snapshot) 사용하기 때문에 Fail-Fast를 지원하지 않는다.
+
+- Iterator는 데이터의 안정성을 보장한다.
