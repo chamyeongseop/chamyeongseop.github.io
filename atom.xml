@@ -8,6 +8,25 @@
     
       
       <item>
+        <title>JAVA Memory 간단 정리</title>
+        
+          <description>&lt;h1 id=&quot;java-memory&quot;&gt;JAVA Memory&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;JAVA 8을 기준으로 JVM 메모리 영역에 변화(Metaspace 등장)가 있었으며, JAVA Memory의 구성요소들을 살펴보자.&lt;/li&gt;
+  &lt;li&gt;JAVA Memory 영역은 Runtime Data Area라고 불리우며, 여러 영역으로 나누어져 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Thu, 31 Oct 2019 09:00:00 +0000</pubDate>
+        <link>
+        /JAVA_Memory</link>
+        <guid isPermaLink="true">/JAVA_Memory</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>JAVA 바이트코드(bytecode) 정리</title>
         
           <description>&lt;p&gt;해당 포스트는 “이상현”님의 자바 바이트코드 소개를 참고하여, 작성되었습니다.&lt;/p&gt;

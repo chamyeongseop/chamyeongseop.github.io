@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator>
   <link href="/author/akas/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2019-10-31T02:10:14+00:00</updated>
+  <updated>2019-11-07T09:02:14+00:00</updated>
   <id>/author/akas/feed.xml</id>
 
   
@@ -32,6 +32,124 @@
   
   
 
+  
+    <entry>
+      <title type="html">JAVA Memory 간단 정리</title>
+      <link href="/JAVA_Memory" rel="alternate" type="text/html" title="JAVA Memory 간단 정리" />
+      <published>2019-10-31T09:00:00+00:00</published>
+      <updated>2019-10-31T09:00:00+00:00</updated>
+      <id>/JAVA_Memory</id>
+      <content type="html" xml:base="/JAVA_Memory">&lt;h1 id=&quot;java-memory&quot;&gt;JAVA Memory&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;JAVA 8을 기준으로 JVM 메모리 영역에 변화(Metaspace 등장)가 있었으며, JAVA Memory의 구성요소들을 살펴보자.&lt;/li&gt;
+  &lt;li&gt;JAVA Memory 영역은 Runtime Data Area라고 불리우며, 여러 영역으로 나누어져 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;method-area&quot;&gt;Method Area&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;JVM에서 읽은 클래스와 인터페이스 정보가 저장되는 영역으로, 클래스 생성자 및 바이트 코드가 저장된다.&lt;/li&gt;
+  &lt;li&gt;Class의 인스턴스가 생성된 후, 메소드가 실행되는 순간, 클래스의 정보가 Method Area에 저장된다.&lt;/li&gt;
+  &lt;li&gt;Method Area는 모든 Thread에 의해 공유되는 영역으로써, JVM이 시작될 때 생성된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;method-area---runtime-constant-pool&quot;&gt;Method Area - Runtime Constant Pool&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Method Area는 내부에 Runtime Constant Pool 영역을 가지고 있으며, 해당 영역에는 클래스 및 인터페이스의 메소드, 필드, 문자열 상수 등의 레퍼런스가 저장되며, 이들의 물리적인 메모리 위치를 참조할 경우에 사용된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heap&quot;&gt;Heap&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;new 연산자 등으로 생성 된 객체(인스턴스)와 배열 등이 저장되는 영역이다.&lt;/li&gt;
+  &lt;li&gt;Heap 영역에 저장된 객체(인스턴스)나 배열은 다른 객체에서 참조될 수 있다.&lt;/li&gt;
+  &lt;li&gt;GC(Garbage Collection)이 발생하는 영역이며, 참조가 없는 객체들은 GC과정을 통해 메모리에서 제거된다.&lt;/li&gt;
+  &lt;li&gt;Heap 영역 또한 내부적으로 여러 영역으로 구성되어 있으며, 이는 객체의 lifecycle과 GC와 연관되어 있다.(튜닝 옵션: -Xms, -Xmx)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jvm-language-stacks&quot;&gt;JVM Language Stacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;메소드 호출 시 수행 중인 메소드 데이터(지역변수, 지역객체 레퍼런스, 메소드 파라미터, 메소드 리턴값 등)를 저장하기 위한 영역이다.&lt;/li&gt;
+  &lt;li&gt;Stack 영역은 Thread 별로 각각 독립적으로 생성된다.&lt;/li&gt;
+  &lt;li&gt;Stack 영역에는 메소드 진입시마다 메소드 데이터를 포함하는 Stack Frame이 생성되어 push되며, 메소드 생성이 완료되면, Stack Frame은 pop되어 사라진다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pc-registers&quot;&gt;PC Registers&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;각 Thread 마다 할당되는 영역으로, Thread가 시작될 때 생성된다.&lt;/li&gt;
+  &lt;li&gt;PC Registers 영역에는 Thrad가 실행할 JVM 명령(바이트 코드 명령)의 주소를 저장하게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;native-method-area는&quot;&gt;Native Method Area는&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;JAVA 외의 언어로 작성된 코드(Native code, JNI로 실해오디는 코드)를 위한 Stack 영영으로, 각 언어에 맞는 Stack이 생성된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/JVM_memory.jpg&quot; alt=&quot;JVM 메모리 구조&quot; title=&quot;JVM Memory 구조&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;heap-영역-자세히-살펴보기&quot;&gt;Heap 영역 자세히 살펴보기&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Heap 영역은 new 연산자 등으로 생성 된 객체(인스턴스)와 배열 등을 저장하는 영역으로, GC가 발생한다.&lt;/li&gt;
+  &lt;li&gt;GC는 한정적인 메모리 자원을 효율적으로 사용하기 위해, 더 이상 불필요한 리소스들을 메모리에서 제거하는 작업을 의미한다.&lt;/li&gt;
+  &lt;li&gt;Heap 영역은 Eden, Suvivorm Old, Permanent 영역으로 구성되어 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;eden-영역young-영역&quot;&gt;Eden 영역(Young 영역)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;새로 생성 된 대부분의 객체가 처음 위치하는 영역이다.&lt;/li&gt;
+  &lt;li&gt;Eden 영역에서는 정기적으로 GC가 발생하며, 이후에 살아남은 객체들은 Suvivor 1 또는 Survivor 2 영역 중 하나의 영역으로 이동하여, 저장된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;survivor-1-survivor-2-영역young-영역&quot;&gt;Survivor 1, Survivor 2 영역(Young 영역)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Survivor 1, Survivor 2 중 하나의 영역이 꽉 차게되면, 그 중 살아남은 객체들은 비워 진 Survivor 영역으로 이동한다. 이동 시, 참조가 없는 객체들은 메모리에서 정리된다.&lt;/li&gt;
+  &lt;li&gt;위와 같은 매커니즘으로 인해, Survivor 1 또는 Survivor 2는 항상 비워진 상태가 되며, Survovir 영역 중 하나의 영역이 완전히 비워지지 않았다면, 문제가 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;minor-gc&quot;&gt;Minor GC&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Eden 영역 또는 Survivor 영역 등, Young 영역에서 발생하는 GC를 minor GC라고 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;old-영역&quot;&gt;Old 영역&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Survivor 1, Survivor 2 영역을 왔다갔다 하는 과정에서 끝까지 살아남은 객체만이 Old 영역으로 이동하게 된다.&lt;/li&gt;
+  &lt;li&gt;보통 Old 영역은 Young 영역보다 크게 할당하며, 이러한 이유로 Old 영역의 GC는 Young 영역보다 적게 발생한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;major-gc&quot;&gt;Major GC&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Old 영역, Permanent 영역에서 발생하는 GC를 Major GC(Full GC)라고 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;permanent-영역&quot;&gt;Permanent 영역&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;클래스 로더에 의해 로드 된 클래스들이 저장되는 공간이다. JAVA 8에서는 Permanent 영역이 조금 더 다듬어져서 Metaspace라는 영역으로 교체되었다.&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Akas</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="JAVA" />
+      
+
+      
+        <summary type="html">JAVA Memory JAVA 8을 기준으로 JVM 메모리 영역에 변화(Metaspace 등장)가 있었으며, JAVA Memory의 구성요소들을 살펴보자. JAVA Memory 영역은 Runtime Data Area라고 불리우며, 여러 영역으로 나누어져 있다.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">JAVA 바이트코드(bytecode) 정리</title>
@@ -777,107 +895,6 @@ pssh &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; hosts.list &lt;span class=
 
       
         <summary type="html">지역변수 및 전역변수 신중하게 사용하기. 지역 변수와 전역 변수를 구분하는 기준은, 변수를 블록 내(if, for 구문)에서만 사용가능하느냐 아니면 전체에서 사용 가능하느냐의 차이. 전역 변수는 블록 내에서 모두 사용가능하지만, 지역 변수로 활용이 되고 있는 부분이 블록 밖에서는 Compile 오류가 발생한다. 전역 변수는 함수 밖에서 선언하며, 어디에서든지 접근 가능한 변수. 지역 변수는 함수 내에서 선언하며 블록 내에서만 접근 가능한 변수. 단 지역변수는 선언한 위치에 따라 접근할 수 있는 (사용할 수 있는) 범위가 달라지기도 한다. 일반적인 프로그래밍에서는 곡 필요하지 않다면, 전역 변수는 잘 사용하지 않는다. 지역 변수는 함수가 끝나거나 블록을 벗어나면 메모리에서 소멸되는데, 전역 변수는 계속 살아남아있어, 메모리 낭비를 초래할 수 있다.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">/etc/hosts 설정</title>
-      <link href="/Linux-hosts" rel="alternate" type="text/html" title="/etc/hosts 설정" />
-      <published>2019-09-11T09:00:00+00:00</published>
-      <updated>2019-09-11T09:00:00+00:00</updated>
-      <id>/Linux-hosts</id>
-      <content type="html" xml:base="/Linux-hosts">&lt;h1 id=&quot;호스트-파일-설정&quot;&gt;호스트 파일 설정&lt;/h1&gt;
-&lt;h2 id=&quot;hosts-파일-소개&quot;&gt;hosts 파일 소개&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;/etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다.&lt;/li&gt;
-  &lt;li&gt;리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다.&lt;/li&gt;
-  &lt;li&gt;“NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;호스트hosts-설정&quot;&gt;호스트(hosts) 설정&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;/etc/hosts 파일을 편집한다.&lt;/li&gt;
-  &lt;li&gt;각 서버들의 IP 주소 및 도메인명과 Alias 등의 정보를 넣어준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# hosts 설정 방법&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# vi /etc/hosts
-101.101.101.101 test1.도메인명.com test1 &lt;span class=&quot;c&quot;&gt;# IP주소 도메인명 Alias(도메인의 별칭) 순으로 입력&lt;/span&gt;
-101.101.101.102 test2.도메인명.com test2
-101.101.101.103 test3.도메인명.com test3
-101.101.101.104 test4.도메인명.com test4&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 도메인명으로 PING TEST&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# ping test1.도메인명.com
-PING test1.도메인명.com &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 4&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;8&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.
-
-&lt;span class=&quot;c&quot;&gt;# ALIAS로 PING TEST&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# ping test1
-PING test1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; 56&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;84&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; bytes of data.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;호스트명-변경&quot;&gt;호스트명 변경&lt;/h2&gt;
-&lt;h3 id=&quot;hostnamectl-명령어를-활용하는-방법&quot;&gt;hostnamectl 명령어를 활용하는 방법&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Network hostname을 test.domainName.com으로 설정&lt;/li&gt;
-  &lt;li&gt;Home 디렉토리에서 작업을 수행한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;hostnamectl set-hostname test.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 변경 된 호스트명을 확인할 수 있다.&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# hostname&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# 출력 결과&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# test1.도메인명.com&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;shell-script를-활용하여-호스트-이름을-변경하는-방법&quot;&gt;Shell script를 활용하여, 호스트 이름을 변경하는 방법&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;bash 파일을 활용하여, 전체 서버에 명령어를 전달하려고 한다. change_hosts_name.sh 이름의 bash 파일을 생성해보자.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# bash 파일을 실행하여, 리눅스 터널링을 수행할 것이다.&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# vi change_hosts_name.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;host 안에는 hostname 목록들이 존재하며, 아래의 내용을 change_hosts_name.sh 파일에 넣어줌으로써, bash 파일을 수정해준다.&lt;/li&gt;
-  &lt;li&gt;내용 수정이 끝난 후에는 vi 명령어를 통해 쓰기 후 저장을 한다.(ESC키 → :wq 입력 후 엔터키로 빠져나온다.)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;host &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;hosts&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;do
-    &lt;/span&gt;ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;portNumber&quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;userName&quot;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'@'&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;hostnamectl set-hostname &lt;span class=&quot;nv&quot;&gt;$host&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;bash 파일을 실행해준다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;root@admin ~]# sh ./change_hosts_name.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content>
-
-      
-      
-      
-      
-      
-
-      <author>
-          <name>Akas</name>
-        
-        
-      </author>
-
-      
-
-      
-        <category term="Linux" />
-      
-
-      
-        <summary type="html">호스트 파일 설정 hosts 파일 소개 /etc/hosts 파일에 리눅스 로컬네임서버 설정을 할 수 있다. 리눅스에서 hosts의 내용은 DNS(Domain Name Server)보다 먼저 탐색되어, 호스트명을 IP 주소로 풀어서 해석한다. “NAVER” 서비스를 이용할 때, “NAVER”의 IP 주소를 입력하는 것이 아니라, 도메인명을 활용하여 서비스를 이용한다.</summary>
       
 
       

@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-10-31T02:10:14+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">JAVA 바이트코드(bytecode) 정리</title><link href="/JAVA_Byte_Code" rel="alternate" type="text/html" title="JAVA 바이트코드(bytecode) 정리" /><published>2019-10-30T09:00:00+00:00</published><updated>2019-10-30T09:00:00+00:00</updated><id>/JAVA_Byte_Code</id><content type="html" xml:base="/JAVA_Byte_Code">&lt;p&gt;해당 포스트는 “이상현”님의 자바 바이트코드 소개를 참고하여, 작성되었습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-11-07T09:02:14+00:00</updated><id>/</id><title type="html">Akas Blog</title><subtitle>The machine learning enginner</subtitle><entry><title type="html">JAVA Memory 간단 정리</title><link href="/JAVA_Memory" rel="alternate" type="text/html" title="JAVA Memory 간단 정리" /><published>2019-10-31T09:00:00+00:00</published><updated>2019-10-31T09:00:00+00:00</updated><id>/JAVA_Memory</id><content type="html" xml:base="/JAVA_Memory">&lt;h1 id=&quot;java-memory&quot;&gt;JAVA Memory&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;JAVA 8을 기준으로 JVM 메모리 영역에 변화(Metaspace 등장)가 있었으며, JAVA Memory의 구성요소들을 살펴보자.&lt;/li&gt;
+  &lt;li&gt;JAVA Memory 영역은 Runtime Data Area라고 불리우며, 여러 영역으로 나누어져 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;method-area&quot;&gt;Method Area&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;JVM에서 읽은 클래스와 인터페이스 정보가 저장되는 영역으로, 클래스 생성자 및 바이트 코드가 저장된다.&lt;/li&gt;
+  &lt;li&gt;Class의 인스턴스가 생성된 후, 메소드가 실행되는 순간, 클래스의 정보가 Method Area에 저장된다.&lt;/li&gt;
+  &lt;li&gt;Method Area는 모든 Thread에 의해 공유되는 영역으로써, JVM이 시작될 때 생성된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;method-area---runtime-constant-pool&quot;&gt;Method Area - Runtime Constant Pool&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Method Area는 내부에 Runtime Constant Pool 영역을 가지고 있으며, 해당 영역에는 클래스 및 인터페이스의 메소드, 필드, 문자열 상수 등의 레퍼런스가 저장되며, 이들의 물리적인 메모리 위치를 참조할 경우에 사용된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;heap&quot;&gt;Heap&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;new 연산자 등으로 생성 된 객체(인스턴스)와 배열 등이 저장되는 영역이다.&lt;/li&gt;
+  &lt;li&gt;Heap 영역에 저장된 객체(인스턴스)나 배열은 다른 객체에서 참조될 수 있다.&lt;/li&gt;
+  &lt;li&gt;GC(Garbage Collection)이 발생하는 영역이며, 참조가 없는 객체들은 GC과정을 통해 메모리에서 제거된다.&lt;/li&gt;
+  &lt;li&gt;Heap 영역 또한 내부적으로 여러 영역으로 구성되어 있으며, 이는 객체의 lifecycle과 GC와 연관되어 있다.(튜닝 옵션: -Xms, -Xmx)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jvm-language-stacks&quot;&gt;JVM Language Stacks&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;메소드 호출 시 수행 중인 메소드 데이터(지역변수, 지역객체 레퍼런스, 메소드 파라미터, 메소드 리턴값 등)를 저장하기 위한 영역이다.&lt;/li&gt;
+  &lt;li&gt;Stack 영역은 Thread 별로 각각 독립적으로 생성된다.&lt;/li&gt;
+  &lt;li&gt;Stack 영역에는 메소드 진입시마다 메소드 데이터를 포함하는 Stack Frame이 생성되어 push되며, 메소드 생성이 완료되면, Stack Frame은 pop되어 사라진다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pc-registers&quot;&gt;PC Registers&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;각 Thread 마다 할당되는 영역으로, Thread가 시작될 때 생성된다.&lt;/li&gt;
+  &lt;li&gt;PC Registers 영역에는 Thrad가 실행할 JVM 명령(바이트 코드 명령)의 주소를 저장하게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;native-method-area는&quot;&gt;Native Method Area는&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;JAVA 외의 언어로 작성된 코드(Native code, JNI로 실해오디는 코드)를 위한 Stack 영영으로, 각 언어에 맞는 Stack이 생성된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/JVM_memory.jpg&quot; alt=&quot;JVM 메모리 구조&quot; title=&quot;JVM Memory 구조&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;heap-영역-자세히-살펴보기&quot;&gt;Heap 영역 자세히 살펴보기&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Heap 영역은 new 연산자 등으로 생성 된 객체(인스턴스)와 배열 등을 저장하는 영역으로, GC가 발생한다.&lt;/li&gt;
+  &lt;li&gt;GC는 한정적인 메모리 자원을 효율적으로 사용하기 위해, 더 이상 불필요한 리소스들을 메모리에서 제거하는 작업을 의미한다.&lt;/li&gt;
+  &lt;li&gt;Heap 영역은 Eden, Suvivorm Old, Permanent 영역으로 구성되어 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;eden-영역young-영역&quot;&gt;Eden 영역(Young 영역)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;새로 생성 된 대부분의 객체가 처음 위치하는 영역이다.&lt;/li&gt;
+  &lt;li&gt;Eden 영역에서는 정기적으로 GC가 발생하며, 이후에 살아남은 객체들은 Suvivor 1 또는 Survivor 2 영역 중 하나의 영역으로 이동하여, 저장된다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;survivor-1-survivor-2-영역young-영역&quot;&gt;Survivor 1, Survivor 2 영역(Young 영역)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Survivor 1, Survivor 2 중 하나의 영역이 꽉 차게되면, 그 중 살아남은 객체들은 비워 진 Survivor 영역으로 이동한다. 이동 시, 참조가 없는 객체들은 메모리에서 정리된다.&lt;/li&gt;
+  &lt;li&gt;위와 같은 매커니즘으로 인해, Survivor 1 또는 Survivor 2는 항상 비워진 상태가 되며, Survovir 영역 중 하나의 영역이 완전히 비워지지 않았다면, 문제가 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;minor-gc&quot;&gt;Minor GC&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Eden 영역 또는 Survivor 영역 등, Young 영역에서 발생하는 GC를 minor GC라고 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;old-영역&quot;&gt;Old 영역&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Survivor 1, Survivor 2 영역을 왔다갔다 하는 과정에서 끝까지 살아남은 객체만이 Old 영역으로 이동하게 된다.&lt;/li&gt;
+  &lt;li&gt;보통 Old 영역은 Young 영역보다 크게 할당하며, 이러한 이유로 Old 영역의 GC는 Young 영역보다 적게 발생한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;major-gc&quot;&gt;Major GC&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Old 영역, Permanent 영역에서 발생하는 GC를 Major GC(Full GC)라고 한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;permanent-영역&quot;&gt;Permanent 영역&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;클래스 로더에 의해 로드 된 클래스들이 저장되는 공간이다. JAVA 8에서는 Permanent 영역이 조금 더 다듬어져서 Metaspace라는 영역으로 교체되었다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Akas</name></author><category term="JAVA" /><summary type="html">JAVA Memory JAVA 8을 기준으로 JVM 메모리 영역에 변화(Metaspace 등장)가 있었으며, JAVA Memory의 구성요소들을 살펴보자. JAVA Memory 영역은 Runtime Data Area라고 불리우며, 여러 영역으로 나누어져 있다.</summary></entry><entry><title type="html">JAVA 바이트코드(bytecode) 정리</title><link href="/JAVA_Byte_Code" rel="alternate" type="text/html" title="JAVA 바이트코드(bytecode) 정리" /><published>2019-10-30T09:00:00+00:00</published><updated>2019-10-30T09:00:00+00:00</updated><id>/JAVA_Byte_Code</id><content type="html" xml:base="/JAVA_Byte_Code">&lt;p&gt;해당 포스트는 “이상현”님의 자바 바이트코드 소개를 참고하여, 작성되었습니다.&lt;/p&gt;
 &lt;h1 id=&quot;java-바이트-코드-소개&quot;&gt;JAVA 바이트 코드 소개&lt;/h1&gt;
 
 &lt;h2 id=&quot;컴파일러&quot;&gt;컴파일러&lt;/h2&gt;
@@ -448,65 +532,4 @@ PING test1 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;101.101.101.101&lt;span
   &lt;li&gt;지역 변수와 전역 변수를 구분하는 기준은, 변수를 블록 내(if, for 구문)에서만 사용가능하느냐 아니면 전체에서 사용 가능하느냐의 차이.&lt;/li&gt;
   &lt;li&gt;전역 변수는 블록 내에서 모두 사용가능하지만, 지역 변수로 활용이 되고 있는 부분이 블록 밖에서는 Compile 오류가 발생한다.&lt;/li&gt;
   &lt;li&gt;전역 변수는 함수 밖에서 선언하며, 어디에서든지 접근 가능한 변수.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akas</name></author><category term="JAVA" /><summary type="html">JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교</summary></entry><entry><title type="html">Stack 과 Queue 정리</title><link href="/Stack_Queue" rel="alternate" type="text/html" title="Stack 과 Queue 정리" /><published>2019-09-11T09:00:00+00:00</published><updated>2019-09-11T09:00:00+00:00</updated><id>/Stack_Queue</id><content type="html" xml:base="/Stack_Queue">&lt;h1 id=&quot;stack&quot;&gt;Stack&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;한 쪽 끝에서만 자료를 넣고 뺄 수 있는 자료 구조.&lt;/li&gt;
-  &lt;li&gt;마지막으로 넣은 것이 가장 먼저 나오기 때문에 Last In First Out (LIFO) 라고 한다.&lt;/li&gt;
-  &lt;li&gt;“스택”에서 데이터가 들어가고 나가는 곳을 “한 지점”에 고정을 시켜놓고, 명령어를 수행한다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;stack-명령어-정리&quot;&gt;Stack 명령어 정리&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;push : 스택에 자료를 넣는 연산&lt;/li&gt;
-  &lt;li&gt;pop : 스택에 자료를 빼는 연산&lt;/li&gt;
-  &lt;li&gt;top : 스택의 가장 위에 있는 자료를 보는 연산&lt;/li&gt;
-  &lt;li&gt;empty : 스택이 비어있는지 아닌지를 알아보는 연산&lt;/li&gt;
-  &lt;li&gt;size : 스택에 저장되어 있는 자료의 개수를 알아보는 연산&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;대표-문제-유형&quot;&gt;대표 문제 유형&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;괄호 문제(짝 맞추기 문제)&lt;/li&gt;
-  &lt;li&gt;스택 수열&lt;/li&gt;
-  &lt;li&gt;단어 뒤집기&lt;/li&gt;
-  &lt;li&gt;에디터 문제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;queue&quot;&gt;Queue&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;한 쪽 끝에서만 자료를 넣고, 다른 한 쪽 끝에서만 뺄 수 있는 자료 구조&lt;/li&gt;
-  &lt;li&gt;먼저 넣은 것이 가장 먼저 나오기 때문에 First In First Out(FIFO) 라고 한다.&lt;/li&gt;
-  &lt;li&gt;삭제 연산은 Begin 쪽에, 삽입 연산은 End 쪽에서 이루어진다.&lt;/li&gt;
-  &lt;li&gt;C++의 경우에는 STL의 queue를 사용하고, Java의 경우에는 java.util.Queue를 사용하는 것이 좋다.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;queue-명령어-정리&quot;&gt;Queue 명령어 정리&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;push : 큐에 자료를 넣는 연산&lt;/li&gt;
-  &lt;li&gt;pop : 큐에서 자료를 빼는 연산&lt;/li&gt;
-  &lt;li&gt;front : 큐의 가장 앞에 있는 자료를 보는 연산&lt;/li&gt;
-  &lt;li&gt;back : 큐의 가장 뒤에 있는 자료를 보는 연산&lt;/li&gt;
-  &lt;li&gt;empty : 큐가 비어있는지 아닌지를 알아보는 연산&lt;/li&gt;
-  &lt;li&gt;size : 큐에 저장되어있는 자료의 개수를 알아보는 연산&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;대표-문제-유형-1&quot;&gt;대표 문제 유형&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;조세퍼스 문제&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;deque-덱&quot;&gt;Deque (덱)&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;양 끝에서만 자료를 넣고 양 끝에서 뺄 수 있는 자료구조&lt;/li&gt;
-  &lt;li&gt;Double-ended queue의 약자&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;deque-명령어-정리&quot;&gt;Deque 명령어 정리&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;push_front : 큐에 자료를 넣는 연산&lt;/li&gt;
-  &lt;li&gt;pop : 큐에서 자료를 넣는 연산&lt;/li&gt;
-  &lt;li&gt;front : 큐의 가장 앞에 있는 자료를 보는 연산&lt;/li&gt;
-  &lt;li&gt;back : 큐의 가장 뒤에 있는 자료를 보는 연산&lt;/li&gt;
-  &lt;li&gt;empty : 큐가 비어있는지 아닌지를 알아보는 연산&lt;/li&gt;
-  &lt;li&gt;size : 큐에 저장되어 있는 자료의 개수를 알아보는 연산&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Akas</name></author><category term="DS" /><summary type="html">Stack 한 쪽 끝에서만 자료를 넣고 뺄 수 있는 자료 구조. 마지막으로 넣은 것이 가장 먼저 나오기 때문에 Last In First Out (LIFO) 라고 한다. “스택”에서 데이터가 들어가고 나가는 곳을 “한 지점”에 고정을 시켜놓고, 명령어를 수행한다.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Akas</name></author><category term="JAVA" /><summary type="html">JAVA의 LENGTH, LENGTH(), SIZE 사용 및 비교</summary></entry></feed>
